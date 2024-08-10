@@ -1,0 +1,21 @@
+body {
+    background-color: #15151513;
+    
+}
+
+#tamanhologofooter {
+    width: 142px;
+    height: 137px;
+}
+
+hr {
+    border: 1px solid #000;
+}
+
+#logofooter {
+    float: left;
+}
+
+#localizacaofooter {
+    float: left;
+}
