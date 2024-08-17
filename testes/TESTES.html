@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Nav com Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            margin-top: 30px; /* Adiciona margem superior */
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .navbar button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .navbar button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Serviços</a>
+            <a href="#products">Produtos</a>
+            <a href="#artist">Artista</a>
+        </div>
+        <button>Botão</button>
+    </nav>
+</body>
+</html>
+

@@ -15,11 +15,15 @@
             <!-- fechar logo -->
 
              <!-- links de outras paginas  -->
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Artista</a></li>
+                <ul id="navphp">
+
+                    <a href="">Home</a>
+
+                    <a href="">Serviços</a>
+
+                   <a href="">Produtos</a>
+
+                   <a href="">Artista</a>
                 </ul>
             <!-- fechamento dos links  -->
 
