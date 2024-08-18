@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/stylefooter.css">
+    <link rel="stylesheet" href="style/principal.css" type="text/css">
         
 </head>
-<body>
+<body id="footer">
     <footer>
         <div id="logofooter">
             <!-- logo  -->

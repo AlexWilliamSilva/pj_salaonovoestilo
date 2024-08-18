@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/stylenav.css">
+    <link rel="stylesheet" href="style/principal.css" type="text/css">
 </head>
-<body>
+<body id="nav">
         <nav>
             <!-- logo -->
             <div>
-                <img src="" alt="">
+                <img src="multimidia/logosalao.webp" alt="">
                     <h2>Salão Novo Estilo</h2>
             </div>         
             <!-- fechar logo -->

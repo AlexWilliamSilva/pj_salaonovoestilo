@@ -1,0 +1,103 @@
+/* style-header */
+
+body, #header {
+    background-color: #fff;
+}
+h2 {
+    font-family: Inria Serif;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-nav */
+
+body, #nav {
+    background-color: #00000085;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+.navbar button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.navbar button:hover {
+    background-color: #45a049;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-footer */
+
+body, #footer  {
+    background-color: #15151513;
+}
+
+#tamanhologofooter {
+    width: 142px;
+    height: 137px;
+}
+
+hr {
+    border: 1px solid #000;
+}
+
+#logofooter {
+    float: left;
+}
+
+#localizacaofooter {
+    float: left;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Index/Home */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Serviços */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Produtos */
+
+body, #Produtos {
+    background-color: #F6F6F6;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Sobre */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Login */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* style-Cadastro */
