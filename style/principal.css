@@ -3,6 +3,7 @@
 body, #header {
     background-color: #fff;
 }
+
 h2 {
     font-family: Inria Serif;
 }
@@ -11,42 +12,32 @@ h2 {
 
 /* style-nav */
 
-body, #nav {
-    background-color: #00000085;
-    font-family: Arial, sans-serif;
+#nav {
+    font-family: Serif, Arial, sans-serif;
+    background-color: #000;
+    position: sticky;
+    width: auto;
+    height: auto;
+    align-items: center;
+    display: flex;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
+#logonav {
+    width: 96px;
+    height: 91px;
     align-items: center;
-    background-color: #333;
+    display: flex;
+}
+
+#navphp {
+    display: inline-flex;
+    gap: 20px;
     padding: 10px;
 }
-.navbar .logo {
-    color: white;
-    font-size: 24px;
+
+a, h2 {
     text-decoration: none;
-}
-.navbar .nav-links {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-}
-.navbar button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-.navbar button:hover {
-    background-color: #45a049;
+    color: #ffffffc5;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
@@ -86,8 +77,40 @@ hr {
 
 /* style-Produtos */
 
-body, #Produtos {
-    background-color: #F6F6F6;
+main, #container {
+    background-color: #f6f6f6;
+    gap: 67px;
+    display: flex;
+    position: relative;
+}
+
+#titulo {
+    text-align: center;
+    position: absolute;
+    right: 55%; 
+    left: 45%;
+}
+
+#divblock {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 366px;
+    height: 374;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-top: 100px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.336);
+}
+
+#imgprod {
+    border: solid #fff thin;
+    border-radius: 10px;
+    width: 190px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */

@@ -1,8 +1,3 @@
-<?php
-    include_once "header.php";
-    include_once "nav.php";
-    include_once "footer.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,40 +19,41 @@
         ?>
     </nav>
 
-    <main>
-            <h1>Produtos</h1>
+    <main id="container">
+        <h1 id="titulo">Produtos</h1>
 
             <!-- produto 01 -->
-        <div>
-            <img src="multimidia/perfume.webp" alt="">
-                <p>Essencial Exclusivo Deo Perfume 100 mL Natura</p>
+        <div id="divblock">
+            <img src="multimidia/perfume.webp" alt="" id="imgprod">
+                <p>Essencial Exclusivo Deo Perfume <strong>Masculino 100 ml Natura</strong></p>
 
         </div>
             <!-- fecha produto 01 -->
 
             <!-- produto 02 -->
-        <div>
-            <img src="multimidia/kaiak.webp" alt="">
-                <p>Kaiak Oceano 100 ml Natura</p>
+        <div id="divblock">
+            <img src="multimidia/kaiak.webp" alt="" id="imgprod">
+                <p>Kaiak Oceano <strong>100 ml Natura</strong></p>
         </div>
          <!-- fecha produto 02 -->  
          
          <!-- produto 03 -->
-         <div> 
-            <img src="multimidia/desodorante.webp" alt="">
-                <p>Desodorante Antitranspirante Roll-On 75ml Natura Homem Sagaz</p>
+         <div id="divblock"> 
+            <img src="multimidia/desodorante.webp" alt="" id="imgprod">
+                <p>Desodorante Antitranspirante Roll-On <strong>75ml Natura Homem Sagaz</strong></p>
         </div> 
          <!-- fecha produto 03 -->
 
          <!-- produto 04 -->
-         <div>
-            <img src="multimidia/pomada.webp" alt="">
-                <p>Barber Style Gel Classic Style 240g </p>
+         <div id="divblock">
+            <img src="multimidia/pomada.webp" alt="" id="imgprod">
+                <p>Gel Classic Style <strong>240g</strong></p>
         </div>
          <!-- fecha produto 04 -->   
 
 
     </main>
+    <hr>
 
     <footer>
         <?php

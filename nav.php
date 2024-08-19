@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/principal.css" type="text/css">
 </head>
-<body id="nav">
-        <nav>
+<body>
+        <nav id="nav">
             <!-- logo -->
             <div>
-                <img src="multimidia/logosalao.webp" alt="">
-                    <h2>Salão Novo Estilo</h2>
+                <img src="multimidia/logosalao.webp" alt="" id="logonav">
+                <h2>Salão Novo Estilo</h2>
             </div>         
             <!-- fechar logo -->
 
              <!-- links de outras paginas  -->
                 <ul id="navphp">
 
-                    <a href="">Home</a>
+                    <a href=""><h3>Home</h3></a>
 
-                    <a href="">Serviços</a>
+                    <a href=""><h3>Serviços</h3></a>
 
-                   <a href="">Produtos</a>
+                   <a href=""><h3>Produtos</h3></a>
 
-                   <a href="">Artista</a>
+                   <a href=""><h3>Artista</h3></a>
+
                 </ul>
             <!-- fechamento dos links  -->
 
-                <a href="#">Login</a>
+                <a href="#"><h3>Login</h3></a>
 
                 <img src="multimidia/icon/whatsapp.webp" alt="icone do WhatsApp" >
                     <img src="multimidia/icon/instagramicon.webp" alt="icone do Instagram" >
