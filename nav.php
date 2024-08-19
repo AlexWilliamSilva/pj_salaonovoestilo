@@ -8,14 +8,14 @@
 <body>
         <nav id="nav">
             <!-- logo -->
-            <div>
-                <img src="multimidia/logosalao.webp" alt="" id="logonav">
+            <div id="logonav">
+                <img src="multimidia/logosalao.webp" alt=""    >
                 <h2>Salão Novo Estilo</h2>
             </div>         
             <!-- fechar logo -->
 
              <!-- links de outras paginas  -->
-                <ul id="navphp">
+                <ul id="menu">
 
                     <a href=""><h3>Home</h3></a>
 
@@ -28,11 +28,11 @@
                 </ul>
             <!-- fechamento dos links  -->
 
-                <a href="#"><h3>Login</h3></a>
+                <a href="#" id="botaologin"><h3>Login</h3></a>
 
-                <img src="multimidia/icon/whatsapp.webp" alt="icone do WhatsApp" >
-                    <img src="multimidia/icon/instagramicon.webp" alt="icone do Instagram" >
-                        <img src="multimidia/icon/facebookicon.webp" alt="icone do Facebook" >
+                <img src="multimidia/icon/whatsapp.webp" alt="icone do WhatsApp" id="midias">
+                <img src="multimidia/icon/instagramicon.webp" alt="icone do Instagram" id="midias">
+                <img src="multimidia/icon/facebookicon.webp" alt="icone do Facebook" id="midias">
 
 
         </nav>
