@@ -12,7 +12,7 @@ h2 {
 
 /* style-nav */
 
-#nav {
+.nav {
     font-family: Serif, Arial, sans-serif;
     background-color: #000;
     position: sticky;
@@ -21,11 +21,6 @@ h2 {
     display: flex;
     align-items: center;
     padding: 0 10%; 
-}
-
-#logonav {
-    display: flex;
-    align-items: center;
 }
 
 #logonav img {
@@ -40,11 +35,18 @@ h2 {
     padding: 10px;
 }
 
-#logonav h2 {
-    
+h2 {
+    color: #ffffffc5;
+    display: flex;
 }
 
-a, h2 {
+li {
+    list-style-type: none;
+    display: flex;
+    padding-left: 5%;
+}
+
+#menu a {
     text-decoration: none;
     color: #ffffffc5;
 }
@@ -55,14 +57,14 @@ a, h2 {
 
 #botaologin {
     background-color: #fff;
+    text-decoration: none;
     color: #000;
     padding: 1px 25px;
     border-radius: 10px;
 }
 
-img #midias {
-    align-items: right;
-    justify-content: flex-end;
+#midias {
+    float: right;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */

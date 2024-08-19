@@ -6,33 +6,33 @@
     <link rel="stylesheet" href="style/principal.css" type="text/css">
 </head>
 <body>
-        <nav id="nav">
+        <nav class="nav">
             <!-- logo -->
             <div id="logonav">
-                <img src="multimidia/logosalao.webp" alt=""    >
+                <img src="multimidia/logosalao.webp" alt="">
                 <h2>Salão Novo Estilo</h2>
             </div>         
             <!-- fechar logo -->
 
              <!-- links de outras paginas  -->
-                <ul id="menu">
+            <ul id="menu">
 
-                    <a href=""><h3>Home</h3></a>
+                <li><a href=""><h3>Home</h3></a></li>
 
-                    <a href=""><h3>Serviços</h3></a>
+                <li><a href=""><h3>Serviços</h3></a></li>
 
-                   <a href=""><h3>Produtos</h3></a>
+                <li><a href=""><h3>Produtos</h3></a></li>
 
-                   <a href=""><h3>Artista</h3></a>
+                <li><a href=""><h3>Artista</h3></a></li>
 
-                </ul>
+            </ul>
             <!-- fechamento dos links  -->
 
-                <a href="#" id="botaologin"><h3>Login</h3></a>
+            <li><a href="#" id="botaologin"><h3>Login</h3></a></li>
 
-                <img src="multimidia/icon/whatsapp.webp" alt="icone do WhatsApp" id="midias">
-                <img src="multimidia/icon/instagramicon.webp" alt="icone do Instagram" id="midias">
-                <img src="multimidia/icon/facebookicon.webp" alt="icone do Facebook" id="midias">
+            <img src="multimidia/icon/whatsicon.png" alt="icone do WhatsApp" id="midias">
+            <img src="multimidia/icon/iconinstagram.png" alt="icone do Instagram" id="midias">
+            <img src="multimidia/icon/facebookicon.png" alt="icone do Facebook" id="midias">
 
 
         </nav>
