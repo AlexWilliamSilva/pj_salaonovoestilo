@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/principal.css" type="text/css">
+    <link rel="stylesheet" href="style/footer.css" type="text/css">
         
 </head>
 <body id="footer">
@@ -23,7 +23,7 @@
         </div>
 
     <!-- localizacao -->
-    <div id="localizacaofooter">
+    <div id="localizacao">
         <h4>Localização</h4>
             <hr>  
                 <ul>

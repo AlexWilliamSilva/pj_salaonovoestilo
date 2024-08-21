@@ -10,87 +10,11 @@ h2 {
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-/* style-nav */
-
-.nav {
-    font-family: Serif, Arial, sans-serif;
-    background-color: #000;
-    position: sticky;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    padding: 0 10%; 
-}
-
-#logonav img {
-    width: 96px; 
-    height: auto;
-    margin-right: 10px;
-}
-
-#menu {
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-}
-
-h2 {
-    color: #ffffffc5;
-    display: flex;
-}
-
-li {
-    list-style-type: none;
-    display: flex;
-    padding-left: 5%;
-}
-
-#menu a {
-    text-decoration: none;
-    color: #ffffffc5;
-}
-
-#menu a:hover {
-    text-decoration: underline;
-}
-
-#botaologin {
-    background-color: #fff;
-    text-decoration: none;
-    color: #000;
-    padding: 1px 25px;
-    border-radius: 10px;
-}
-
-#midias {
-    float: right;
-}
-
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-/* style-footer */
 
-body, #footer  {
-    background-color: #15151513;
-}
 
-#tamanhologofooter {
-    width: 142px;
-    height: 137px;
-}
 
-hr {
-    border: 1px solid #000;
-}
-
-#logofooter {
-    float: left;
-}
-
-#localizacaofooter {
-    float: left;
-}
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 

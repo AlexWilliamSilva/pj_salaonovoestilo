@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/principal.css" type="text/css">
+    <link rel="stylesheet" href="style/nav.css" type="text/css">
 </head>
 <body>
         <nav class="nav">
@@ -28,7 +28,7 @@
             </ul>
             <!-- fechamento dos links  -->
 
-            <li><a href="#" id="botaologin"><h3>Login</h3></a></li>
+            <li><a href="#"><button>Login</button></a></li>
 
             <img src="multimidia/icon/whatsicon.png" alt="icone do WhatsApp" id="midias">
             <img src="multimidia/icon/iconinstagram.png" alt="icone do Instagram" id="midias">
