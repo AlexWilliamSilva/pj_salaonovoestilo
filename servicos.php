@@ -1,3 +1,9 @@
+<?php
+    require_once "header.php";
+    require_once "nav.php";
+    require_once "footer.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,17 +13,6 @@
     <link rel="stylesheet" href="style/principal.css" type="text/css">
 </head>
 <body>
-    <header>
-        <?php
-            require_once "header.php";
-        ?>
-    </header>
-
-    <nav>
-        <?php
-            require_once "nav.php"
-        ?>
-    </nav>
 
     <main>
         <h1>Serviços</h1>
@@ -105,12 +100,6 @@
         </div>
 
      </main>
-
-    <footer>
-        <?php
-            require_once "footer.php";
-        ?>
-    </footer>
     
 </body>
 </html>

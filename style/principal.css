@@ -40,6 +40,8 @@ main, #container {
     position: absolute;
     right: 55%; 
     left: 45%;
+    width: 188.84px;
+    border: 1px solid #000;
 }
 
 #divblock {

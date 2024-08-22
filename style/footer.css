@@ -2,13 +2,63 @@ body, #footer  {
     background-color: #15151513;
 }
 
+#footer li {
+    font-size: 15px;
+}
 
-/*localizacao*/
-#localizacao{
-  
+#footer h4 {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+}
+
+#logofooter{
+    display: inline-block;
+}
+
+#imgfooter img {
+    width: 142px; /* trocar após a finalização das imagens */
+    height: 147px;
+    float: left;
+    padding-bottom: -10px ;
+}
+
+#titulofooter {
+    color: #000;
     
 }
+
+#midias img {
+    padding: 8px;
+    cursor: pointer;
+ }
+
+ #footerinfo {
+    display: flex;
+ }
+
+#localizacaofooter ul li{
+    list-style: none;
+}
+
+#servicofooter{
+    
+}
+#contatofooter ul li {
+    list-style: none;
+}
+
+/*localizacao*/
+
 #localizacao hr {
+    width: 188.84px;
+    border: 1px solid #000;
+}
+
+#servicolinkrapido ul li a{
+    text-decoration: none;
+    color:#000
+}
+
+#footer hr {
     width: 188.84px;
     border: 1px solid #000;
 }

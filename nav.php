@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/nav.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav class="nav">
+        <nav>
             <!-- logo -->
             <div id="logonav">
-                <img src="multimidia/logosalao.webp" alt="">
-                <h2>Salão Novo Estilo</h2>
-            </div>         
+                <div id="imgnav">
+                    <img src="multimidia/logosalao.webp" alt="">
+                </div>  
+
+                <div id="titulonav">
+                    <h2>Salão Novo Estilo</h2> 
+                </div>  
+            </div>
             <!-- fechar logo -->
+           
 
              <!-- links de outras paginas  -->
-            <ul id="menu">
+            <div id="menu">
+                <ul>
 
-                <li><a href=""><h3>Home</h3></a></li>
+                    <li><a href="index.php"><h3>Home</h3></a></li>
 
-                <li><a href=""><h3>Serviços</h3></a></li>
+                    <li><a href="servicos.php"><h3>Serviços</h3></a></li>
 
-                <li><a href=""><h3>Produtos</h3></a></li>
+                    <li><a href="produtos.php"><h3>Produtos</h3></a></li>
 
-                <li><a href=""><h3>Artista</h3></a></li>
+                    <li><a href="sobre.php"><h3>Sobre</h3></a></li>
 
-            </ul>
+                </ul>
+            </div>
             <!-- fechamento dos links  -->
 
-            <li><a href="#"><button>Login</button></a></li>
+            <div id="buttonlogin">
+                <li><a href="#"><button>Login</button></a></li>
+            </div>
 
-            <img src="multimidia/icon/whatsicon.png" alt="icone do WhatsApp" id="midias">
-            <img src="multimidia/icon/iconinstagram.png" alt="icone do Instagram" id="midias">
-            <img src="multimidia/icon/facebookicon.png" alt="icone do Facebook" id="midias">
-
-
+            <div id="midias">
+                <img src="multimidia/icon/whatsicon.png" alt="icone do WhatsApp">
+                <img src="multimidia/icon/iconinstagram.png" alt="icone do Instagram">
+                <img src="multimidia/icon/facebookicon.png" alt="icone do Facebook">
+            </div>
         </nav>
     
 </body>

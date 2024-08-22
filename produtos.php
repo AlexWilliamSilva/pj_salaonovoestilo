@@ -1,3 +1,8 @@
+<?php
+    require_once "header.php";
+    require_once "nav.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,12 +17,6 @@
             require_once "header.php";
         ?>
     </header>
-
-    <nav>
-        <?php
-            require_once "nav.php"
-        ?>
-    </nav>
 
     <main id="container">
         <h1 id="titulo">Produtos</h1>
