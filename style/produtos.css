@@ -6,12 +6,13 @@
     left: 45%;
  }
 
-#containerprodutos {
+#produtos {
     background-color: #f6f6f6;
     gap: 67px;
     display: flex;
     position: relative;
     padding-left: 150px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
 }
 
 #divblock {

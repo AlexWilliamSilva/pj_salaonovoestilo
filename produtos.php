@@ -20,12 +20,13 @@
         ?>
     </nav>
 
-    <main id="containerprodutos">
+<main id="produtos">
         
         <div id="tituloprodutos">
             <h1>Produtos</h1>
+                
         </div>
-
+<hr>
        <div id="divblockconjunto">    
                 <!-- produto 01 -->
             <div id="divblock">
