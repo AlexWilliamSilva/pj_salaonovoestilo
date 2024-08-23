@@ -58,15 +58,17 @@
             <div id="servicofooter">  <!-- Div para Servicos -->
                 <h4>Serviços</h4> 
                     <hr>  
-                        <li>Limpeza de pele</li>
-                        <li>Luzes/masculino </li>
-                        <li>Cortes cabelo masculino</li>
-                        <li>Cortes cabelo feminino </li>
-                        <li>Progressiva masculino</li>
-                        <li>Progressiva feminino </li>
-                        <li>Relaxamento capilar masculino </li>
-                        <li>Barba </li>
-                        <li>Sombrancelha masculino</li>
+                        <ul>
+                            <li>Limpeza de pele</li>
+                            <li>Luzes/masculino </li>
+                            <li>Cortes cabelo masculino</li>
+                            <li>Cortes cabelo feminino </li>
+                            <li>Progressiva masculino</li>
+                            <li>Progressiva feminino </li>
+                            <li>Relaxamento capilar masculino </li>
+                            <li>Barba </li>
+                            <li>Sombrancelha masculino</li>
+                        <ul>
             </div>   <!--fecha div servicos  -->
 
             <!-- links rapidos -->

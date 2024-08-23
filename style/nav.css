@@ -1,11 +1,13 @@
-*{
+.navcss {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inria Serif', serif;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,6 +16,8 @@ nav {
     padding-right: 100px;
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+    position: sticky;
+    overflow: auto;
 }
 
 #imgnav img {
@@ -39,19 +43,19 @@ nav {
     float: left;
 }
 
-nav ul li {
+.nav ul li {
     list-style-type: none;
     display: inline-block;
     padding: 10px 20px;
 }
 
-nav ul li a {
+.nav ul li a {
     color: rgba(255, 255, 255, 0.70);
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
     color: red;
     transition: .3s;
 }

@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-        <nav>
+<body class="navcss">
+        <nav class="nav">
             <!-- logo -->
             <div id="logonav">
                 <div id="imgnav">

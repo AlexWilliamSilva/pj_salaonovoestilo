@@ -1,0 +1,42 @@
+#tituloservicos {
+    text-align: center;
+    color: #B10000;
+    position: absolute;
+    right: 55%; 
+    left: 45%;
+}
+
+#AreaMasculino {
+    
+}
+
+#AreaFeminina {
+   
+}
+
+#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
+#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7, 
+#divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 {
+    background-color: #fff;
+    width: 400px;
+    height: 138px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 37px;
+    margin-top: 110px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.336);
+}
+
+#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
+#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7 h3 {
+    color: #004197;
+}
+
+#servicoscss p {
+  font-size: 18px;
+}
+
+#divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 h3 {
+    color: #B10000;
+}
