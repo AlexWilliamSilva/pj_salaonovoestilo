@@ -9,8 +9,7 @@
 </head>
 <body>
     <footer  id="footer">
-
-        <div id="logofooter">
+            <div id="logofooter">
             <!-- logo  -->
              <div id="imgfooter">
                 <img src="multimidia/logosalao.webp" alt="logo do salao novo estilo" id="tamanhologofooter">
@@ -20,8 +19,6 @@
             <div id="titulofooter">
                 <h2>Salão Novo Estilo</h2>
             </div>
-
-        </div>
            
         <div id="midias">
              <!-- rede social -->
@@ -83,8 +80,8 @@
                         </ul>
             </div>             
             <!-- fecha links rapidos -->
-        </div>
-         
+        </div>  
+               
     </footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 .navcss {
     padding: 0;
     margin: 0;
@@ -22,8 +23,8 @@
 }
 
 #imgnav img {
-    width: 96px; /* trocar após a finalização das imagens */
-    height: 91px;
+    width: 85px; /* trocar após a finalização das imagens */
+    height: 80px;
     float: left;
 }
 
@@ -37,7 +38,7 @@
     color: rgba(255, 255, 255, 0.70);
     margin-top: -10px ;
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 1.30em;
 }
 
 #menu {

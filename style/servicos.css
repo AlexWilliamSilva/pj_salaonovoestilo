@@ -1,42 +1,113 @@
-#tituloservicos {
+/* Para todos os elementos */
+
+p {
+    font-size: 18px;
+    color: #000;
+    margin-top: 4px;
+  }
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Titulo de Serviços */
+
+h1 {
     text-align: center;
-    color: #B10000;
-    position: absolute;
-    right: 55%; 
-    left: 45%;
+    color: #000;
+    padding-bottom: 20px;
+    font-family: 'Inria Sans', sans-serif;
 }
+
+hr {
+    border: #000 solid 1px;
+    width: 250px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Area Masculino */
 
 #AreaMasculino {
-    
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.500);
+    border: rgba(0, 0, 0, 0.05) solid 1px;
 }
 
-#AreaFeminina {
-   
+#tituloareamasculino {
+    padding-top: 50px;
+    font-size: 24px;
 }
+
+#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3 {
+    display: flexbox;
+    margin-right: auto;
+}
+
+#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6 {
+    display: flexbox;
+    margin-left: auto;
+}
+
+#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
+#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7 h4 {
+    color: #004197;
+    font-size: 20px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Area Feminina */
+
+#divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 h4 {
+    color: #B10000;
+    font-size: 20px;
+}
+
+#tituloareafeminina h3 {
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Area Feminina e Area Masculina */
 
 #divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
 #divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7, 
 #divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 {
     background-color: #fff;
-    width: 400px;
+    font-family: 'Inria Sans', sans-serif;
+    width: 500px;
+    border: #fff 1px solid ;
+    border-radius: 15px;
     height: 138px;
     text-align: center;
     display: flex;
     flex-direction: column;
     padding-top: 37px;
+    margin-left: 100px;
     margin-top: 110px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.336);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
-#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7 h3 {
-    color: #004197;
+#tituloareamasculino, #tituloareafeminina h3 {
+    text-align: center;
+    align-items: center;
+    font-family: 'Inria Sans', sans-serif;
 }
 
-#servicoscss p {
-  font-size: 18px;
+/* --------------------------------------------------------------------------------------- */
+
+.displayleft, .displayright {
+    display: flexb;
+    justify-content: space-between;
 }
 
-#divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 h3 {
-    color: #B10000;
+.displayleft {
+    margin-left: auto;
+}
+
+.displayright {
+    margin-right: auto;
 }
