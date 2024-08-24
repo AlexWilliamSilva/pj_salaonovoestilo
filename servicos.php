@@ -1,8 +1,3 @@
-<?php
-    require_once "header.php";
-    require_once "nav.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +6,12 @@
     <title>Salão Novo Estilo</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
-<body>
+<body class="servicoscss">
+
+    <?php
+        require_once "header.php";
+        require_once "nav.php";
+    ?>
 
     <main class="mainservicos">
        
@@ -113,7 +113,7 @@
                             <!--  fecha serviço 03  -->
             </div>
 
-     </main>
+    </main>
 
     <?php 
         require_once "footer.php";

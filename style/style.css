@@ -412,5 +412,11 @@ footer hr {
 /* responsive css */
 
 @media screen and (max-width: 768px) {
-    display: block;
+    .servicoscss  {
+        display: block;
+    }
+
+    .navcss {
+        width: 200px;
+    }
 }

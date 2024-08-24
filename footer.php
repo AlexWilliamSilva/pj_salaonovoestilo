@@ -8,7 +8,7 @@
         
 </head>
 <body>
-    <footer>
+    <footer class="footercss">
         <div class="logofooter">
 
             <!-- logo  -->
