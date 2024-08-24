@@ -1,8 +1,3 @@
-<?php
-    require_once "header.php";
-    require_once "nav.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salão Novo Estilo</title>
     <link rel="stylesheet" href="style/style.css" type="text/css">     
+    <link rel="stylesheet" href="style/media.css" type="text/css">
 </head>
 <body id="corfundoprod">
 
-    <main class="fundoproduto">
+    <?php
+        require_once "header.php";
+        require_once "nav.php";
+    ?>
+
+    <main id="fundoproduto">
         
         <h1>Produtos</h1>
         <hr>      

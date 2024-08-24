@@ -1,0 +1,21 @@
+/* ------------------------------------------ Modelo Mobile ---------------------------------------------------------- */
+
+/* responsive css */
+
+@media screen and (min-width: 600px) and (max-width: 1002px) {
+
+    .navcss {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Inria Serif', serif;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #fundoproduto {
+        background-color: aqua;
+    }
+
+
+}
