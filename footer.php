@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/footer.css" type="text/css">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
         
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <h2>Salão Novo Estilo</h2>
             </div>
             
-            <div id="midias">
+            <div id="midiasfooter">
                 <!-- rede social -->
                 <img src="multimidia/icon/whatsicon.png" alt="icone do WhatsApp" >
                 <img src="multimidia/icon/iconinstagram.png" alt="icone do Instagram" >
