@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <main>
+    <main class="mainservicos">
        
             <h1>Serviços</h1>
             <hr>
@@ -71,12 +71,15 @@
 
             </div>
             
+            <div id="displaycenter">
                         <!-- serviço 07 --> 
                 <div id="divblockservicosmasc7">
                     <h4>Limpeza de Pele</h4>
                         <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
                 </div>  
-                         <!-- fecha serviço 07 -->       
+                         <!-- fecha serviço 07 -->     
+            </div>  
+
         </div>
         
            
@@ -87,26 +90,28 @@
                 <h3>Serviços na área Feminina</h3>
             </div>
 
+            <div id="displaycenterfeminino">
                         <!-- serviço 01  -->
-            <div id="divblockservicosfeminino1">
-                <h4>Cortes de cabelo Feminino</h4>
-                    <p>Estilos variados para realçar a beleza e elegância feminina.</p>
-            </div>  
-                        <!-- fecha serviço 01  -->
+                <div id="divblockservicosfeminino1">
+                    <h4>Cortes de cabelo Feminino</h4>
+                        <p>Estilos variados para realçar a beleza e elegância feminina.</p>
+                </div>  
+                            <!-- fecha serviço 01  -->
 
-                        <!-- serviço 02  -->
-            <div id="divblockservicosfeminino2">
-                <h4>Progressiva Feminino</h4>
-                    <p>Alisamento e tratamento para cabelos femininos.</p>
-            </div>  
-                        <!-- fecha serviço 02  -->
+                            <!-- serviço 02  -->
+                <div id="divblockservicosfeminino2">
+                    <h4>Progressiva Feminino</h4>
+                        <p>Alisamento e tratamento para cabelos femininos.</p>
+                </div>  
+                            <!-- fecha serviço 02  -->
 
-                        <!--  serviço 03  -->
-            <div id="divblockservicosfeminino3">
-                <h4>Limpeza de Pele</h4>
-                    <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
-            </div>  
-                         <!--  fecha serviço 03  -->
+                            <!--  serviço 03  -->
+                <div id="divblockservicosfeminino3">
+                    <h4>Limpeza de Pele</h4>
+                        <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
+                </div>  
+                            <!--  fecha serviço 03  -->
+            </div>
 
      </main>
 

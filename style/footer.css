@@ -1,18 +1,33 @@
-#footer  {
-    background-color: #15151513;
+/* Para todo o footer */
+
+footer {
+    background-color: #15151513 !important;
 }
 
-#footer li {
-    font-size: 15px;
+footer li {
+    font-size: 15px !important;
 }
 
-#footer h4 {
+footer h4 {
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+    text-align: center;
+    margin-bottom: -4px;
 }
 
-#logofooter{
-    display: inline-block;
+footer li a {
+    font-size: 20px !important;
 }
+
+/* --------------------------------------------------------------------------------------- */
+
+/* logo footer */
+
+.logofooter{
+    display: inline-block;
+    margin-left: 255px;
+}
+
+/* sub - imagem do footer */
 
 #imgfooter img {
     width: 142px; /* trocar após a finalização das imagens */
@@ -23,39 +38,58 @@
 
 #titulofooter {
     color: #000;
-    
+    text-align: center;
+    margin-left: -20px;
 }
 
 #midias img {
-    padding: 8px;
+    padding-right: 26px;
     cursor: pointer;
+    margin-left: -15px;
  }
 
- #footerinfo {
-    display: flex;
+/* --------------------------------------------------------------------------------------- */
+
+/* footerinfo */
+
+#footerinfo {
+    display: inline-flex;
+    float: right;
+    margin-right: 150px;
  }
 
-#localizacaofooter ul li{
+ #localizacaofooter ul li{
     list-style: none;
+    text-align: center;
+    margin-left: -60px;
 }
 
 #contatofooter ul li {
     list-style: none;
+    text-align: center;
+    margin-left: -20px;
 }
 
-/*localizacao*/
-
-#localizacao hr {
-    width: 188.84px;
-    border: 1px solid #000;
+#servicofooter ul {
+    list-style: none;
+    list-style: none;
+    text-align: center;
+    margin-left: -20px;
 }
 
-#servicolinkrapido ul li a{
+#linksrapido ul li a{
     text-decoration: none;
     color:#000
 }
 
-#footer hr {
-    width: 188.84px;
+#linksrapido ul li {
+    list-style: none;
+    padding: 0;
+}
+
+footer hr {
+    width: 188px;
     border: 1px solid #000;
 }
+
+/* --------------------------------------------------------------------------------------- */

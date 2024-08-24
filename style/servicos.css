@@ -1,27 +1,32 @@
 /* Para todos os elementos */
 
-p {
-    font-size: 18px;
+.mainservicos p {
+    font-size: 16px;
     color: #000;
-    margin-top: 4px;
+    margin-top: -8px;
   }
 
 /* --------------------------------------------------------------------------------------- */
 
 /* Titulo de Serviços */
 
-h1 {
+.mainservicos h1 {
+    margin-top: 44px;
     text-align: center;
     color: #000;
     padding-bottom: 20px;
     font-family: 'Inria Sans', sans-serif;
 }
 
-hr {
+.mainservicos hr {
     border: #000 solid 1px;
     width: 250px;
     margin-top: -40px;
     margin-bottom: 60px;
+}
+
+.mainservicos h4 {
+    margin-top: -8px;
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -49,10 +54,50 @@ hr {
     margin-left: auto;
 }
 
+#divblockservicosmasc7 {
+    margin-bottom: 40px;
+}
+
+/* sub - Blocos de display da area masculina */
+
+.displayleft, .displayright {
+    display: inline-block;
+
+}
+
+.displayleft {
+    padding-right: 200px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
 #divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
 #divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7 h4 {
     color: #004197;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+#displaycenter, #divblockservicosmasc7 {
+    align-items: center;
+    text-align: center;
+    display: flexbox;
+    margin-left: 400px;
+}
+
+#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
+#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7 {
+    background-color: #fff;
+    font-family: 'Inria Sans', sans-serif;
+    width: 500px;
+    border: #fff 1px solid ;
+    height: 138px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 37px;
+    margin-left: 100px;
+    margin-top: 90px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 /* --------------------------------------------------------------------------------------- */
@@ -61,7 +106,7 @@ hr {
 
 #divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 h4 {
     color: #B10000;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #tituloareafeminina h3 {
@@ -69,45 +114,39 @@ hr {
     font-size: 30px;
 }
 
-/* --------------------------------------------------------------------------------------- */
-
-/* Area Feminina e Area Masculina */
-
-#divblockservicosmasc1, #divblockservicosmasc2, #divblockservicosmasc3, 
-#divblockservicosmasc4, #divblockservicosmasc5, #divblockservicosmasc6, #divblockservicosmasc7, 
 #divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 {
     background-color: #fff;
     font-family: 'Inria Sans', sans-serif;
     width: 500px;
     border: #fff 1px solid ;
-    border-radius: 15px;
+    border-radius: 10px;
     height: 138px;
     text-align: center;
     display: flex;
     flex-direction: column;
     padding-top: 37px;
     margin-left: 100px;
-    margin-top: 110px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin-top: 90px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+
+#displaycenterfeminino {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-right: 95px;
+    margin-bottom: 40px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Area Feminina e Area Masculina */
 
 #tituloareamasculino, #tituloareafeminina h3 {
     text-align: center;
     align-items: center;
     font-family: 'Inria Sans', sans-serif;
+    margin-top: 50px;
 }
 
 /* --------------------------------------------------------------------------------------- */
-
-.displayleft, .displayright {
-    display: flexb;
-    justify-content: space-between;
-}
-
-.displayleft {
-    margin-left: auto;
-}
-
-.displayright {
-    margin-right: auto;
-}
