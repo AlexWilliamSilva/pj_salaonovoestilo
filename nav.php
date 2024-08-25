@@ -16,7 +16,7 @@
             <!-- logo -->
             <div id="logonav">
                 <div id="imgnav">
-                    <img src="multimidia/logosalao.webp" alt="">
+                    <img src="multimidia/logosalaonav.jpg" alt="">
                 </div>  
 
                 <div id="titulonav">

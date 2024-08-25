@@ -8,8 +8,8 @@
     </head>
     <body>
         <header id="header">         
-                <div id="container">
-                    <img id="logo" src="multimidia/logosalao.webp" alt="">
+                <div id="imgheader">
+                    <img id="logo" src="multimidia/logosalaoheader.jpg" alt="">
                 </div>
                 <h2 id="Logoheader">Salão Novo Estilo</h2>
         </header>

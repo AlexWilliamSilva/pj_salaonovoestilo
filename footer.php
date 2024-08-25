@@ -13,7 +13,7 @@
 
             <!-- logo  -->
             <div id="imgfooter">
-                <img src="multimidia/logosalao.webp" alt="logo do salao novo estilo" id="tamanhologofooter">
+                <img src="multimidia/logosalaofooter.png" alt="logo do salao novo estilo">
             </div>           
             <!-- fechando a logo -->
 

@@ -6,7 +6,7 @@
     background-color: #fff;
     padding: 0 0 1px ;
 }
-#header #container {
+#header #imgheader {
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -48,8 +48,6 @@
 }
 
 #imgnav img {
-    width: 85px; /* trocar após a finalização das imagens */
-    height: 80px;
     float: left;
 }
 
@@ -345,8 +343,6 @@ footer li a {
 /* sub - imagem do footer */
 
 #imgfooter img {
-    width: 142px; /* trocar após a finalização das imagens */
-    height: 147px;
     float: left;
     padding-bottom: -10px ;
 }
