@@ -1,32 +1,38 @@
-<?php
-    require_once "header.php";
-    require_once "nav.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css" type="text/css">
-    <title>Inicio - Salão Novo Estilo Itapira</title>
+    <title>Home - Salão Novo Estilo Itapira</title>
 </head>
 <body class="indexbody">
+
+    <?php
+        require_once "header.php";
+        require_once "nav.php";
+    ?>
     <main>
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nihil non repellat debitis nam necessitatibus doloremque perferendis dolor iste error nemo voluptates rem eos, facilis temporibus odio deleniti voluptatum minus?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, aliquid in cumque quos maxime delectus facere minima error, perferendis porro quam eum. Quo iste dolorum officia architecto hic quis natus.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus distinctio ea reprehenderit facere quaerat dolorem voluptatibus possimus ducimus fuga eligendi nostrum sed, reiciendis accusantium perspiciatis libero architecto magni consequuntur.lorem
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque animi error perferendis ab atque ex excepturi aut, a unde dignissimos sit neque? Possimus hic ut perspiciatis at quisquam. Quas, sequi.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem accusantium fugit saepe error nesciunt autem ut aspernatur! Animi voluptas dolores totam aspernatur repudiandae, veritatis eos doloremque, atque, facilis at illum.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing 
-        elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam
-        obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid 
-        velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor 
-        sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione 
-        quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque 
-        aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor 
-        sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim.Lorem ipsum dolor sit amet consectetur adipisicing elit. In, itaque corrupti quo ratione quisquam et totam obcaecati sint nesciunt possimus ea consectetur eaque aliquid velit incidunt exercitationem beatae omnis enim. 
+        <section id="carrossel">
+
+        </section>
+
+        <section id="secaoartista">
+
+            <h1>Artista</h1>
+
+            <div>
+                <img src="multimidia/kaiak.webp" alt="" id="Imagemdonosalao">
+            </div>
+
+            <div id="botaoartista">
+                <a href="#">
+                    <button id="botaocssartista">Saiba mais <img src="multimidia/icon/portaiconindex.png" alt="" id="imgportaindex"></button>
+                </a>
+            </div>
+
+        </section>
 
     </main>
 

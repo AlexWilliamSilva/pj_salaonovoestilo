@@ -19,13 +19,13 @@
             <h1>Serviços</h1>
             <hr>
 
-        <div id="AreaMasculino">
+        <section id="AreaMasculino">
 
-            <div id="tituloareamasculino">
+            <div id="tituloareaserv">
                 <h3>Serviços na área Masculino</h3>
             </div>
 
-            <div class="displayleft">
+            <section class="displayleft">
                     <!-- serviço 01 -->
                 <div id="divblockservicosmasc1">
                     <h4 class="servicos">Progressiva Masculino</h4>
@@ -38,81 +38,82 @@
                     <h4  class="servicos">Cortes de Cabelo Masculino</h4>
                         <p>Cortes clássicos e modernos para atender ao seu estilo e personalidade.</p>
                 </div>    
-                        <!-- fecha serviço 02 -->
+                    <!-- fecha serviço 02 -->
 
-                        <!-- serviço 03 -->
+                    <!-- serviço 03 -->
                 <div id="divblockservicosmasc3">
                     <h4>Luzes Masculino</h4>
-                        <p>Serviço de luzes para realçar o visual dos cabelos masculinos.</p>
+                    <p>Serviço de luzes para realçar o visual dos cabelos masculinos.</p>
                 </div>
-                         <!-- fecha serviço 03 --> 
-            </div>
+                    <!-- fecha serviço 03 --> 
+            </section>
                           
-            <div class="displayright">
-                          <!-- serviço 04 -->                       
+            <section class="displayright">
+                <!-- serviço 04 -->                       
                 <div id="divblockservicosmasc4">
                     <h4>Sobrancelha masculina</h4>
-                        <p>Design e cuidados para manter a sobrancelha masculina alinhada.</p>
+                    <p>Design e cuidados para manter a sobrancelha masculina alinhada.</p>
                 </div> 
-                        <!-- fecha serviço 04 -->
-                         
-                        <!-- serviço 05 -->    
+                <!-- fecha serviço 04 -->
+                            
+                <!-- serviço 05 -->    
                 <div id="divblockservicosmasc5">
                     <h4>Relaxamento Capilar masculino</h4>
-                        <p>Tratamento para relaxar os fios e facilitar o penteado.</p>
+                    <p>Tratamento para relaxar os fios e facilitar o penteado.</p>
                 </div> 
-                        <!-- fecha serviço 05 --> 
-                         
-                        <!-- serviço 06 -->
+                <!-- fecha serviço 05 --> 
+                            
+                <!-- serviço 06 -->
                 <div id="divblockservicosmasc6">
                     <h4>Barba</h4>
-                        <p>Modelagem, aparo e cuidados completos para a barba.</p>
+                    <p>Modelagem, aparo e cuidados completos para a barba.</p>
                 </div> 
-                        <!-- fecha serviço 06 --> 
+                <!-- fecha serviço 06 --> 
 
-            </div>
+            </section>
             
-            <div id="displaycenter">
+            <section id="displaycenter">
                         <!-- serviço 07 --> 
                 <div id="divblockservicosmasc7">
                     <h4>Limpeza de Pele</h4>
                         <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
                 </div>  
                          <!-- fecha serviço 07 -->     
-            </div>  
+            </section>  
 
-        </div>
+        </section>
         
            
         <!-- Area feminida  -->
-        <div id="AreaFeminina">
+        <section id="AreaFeminina">
 
-            <div id="tituloareafeminina">
+            <div id="tituloareaserv">
                 <h3>Serviços na área Feminina</h3>
             </div>
 
-            <div id="displaycenterfeminino">
+            <section id="displaycenterfeminino">
                         <!-- serviço 01  -->
                 <div id="divblockservicosfeminino1">
                     <h4>Cortes de cabelo Feminino</h4>
-                        <p>Estilos variados para realçar a beleza e elegância feminina.</p>
+                    <p>Estilos variados para realçar a beleza e elegância feminina.</p>
                 </div>  
-                            <!-- fecha serviço 01  -->
+                        <!-- fecha serviço 01  -->
 
-                            <!-- serviço 02  -->
+                        <!-- serviço 02  -->
                 <div id="divblockservicosfeminino2">
                     <h4>Progressiva Feminino</h4>
-                        <p>Alisamento e tratamento para cabelos femininos.</p>
+                    <p>Alisamento e tratamento para cabelos femininos.</p>
                 </div>  
-                            <!-- fecha serviço 02  -->
+                        <!-- fecha serviço 02  -->
 
-                            <!--  serviço 03  -->
+                        <!--  serviço 03  -->
                 <div id="divblockservicosfeminino3">
                     <h4>Limpeza de Pele</h4>
-                        <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
+                    <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
                 </div>  
-                            <!--  fecha serviço 03  -->
-            </div>
+                        <!--  fecha serviço 03  -->
+                          
+            </section>
 
     </main>
 

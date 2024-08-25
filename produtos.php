@@ -17,9 +17,9 @@
     <main id="fundoproduto">
         
         <h1>Produtos</h1>
-        <hr>      
+        <hr>
 
-        <div id="divblockconjunto">    
+        <section id="divblockconjunto">    
                 <!-- produto 01 -->
             <div id="divblock">
                 <img src="multimidia/perfume.webp" alt="" id="imgprod">
@@ -47,7 +47,8 @@
                 <p>Gel Classic Style <strong>240g</strong></p>
             </div>
             <!-- fecha produto 04 -->   
-        </div>
+
+        </section>
 
     </main>
  

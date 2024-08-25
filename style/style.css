@@ -87,7 +87,7 @@
     transition: .3s;
 }
 
-button {
+#botaocsslogin {
     border: none;
     color: #000;
     background-color: #fff;
@@ -212,16 +212,6 @@ button {
 
 /* Area Feminina */
 
-#divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 h4 {
-    color: #B10000;
-    font-size: 24px;
-}
-
-#tituloareafeminina h3 {
-    padding-top: 50px;
-    font-size: 30px;
-}
-
 #divblockservicosfeminino1, #divblockservicosfeminino2, #divblockservicosfeminino3 {
     background-color: #fff;
     font-family: 'Inria Sans', sans-serif;
@@ -238,6 +228,12 @@ button {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+#displaycenterfeminino h4 {
+    color: #B10000;
+    font-size: 24px;
+    text-align: center;
+}
+
 #displaycenterfeminino {
     align-items: center;
     text-align: center;
@@ -248,10 +244,11 @@ button {
 
 /* Area Feminina e Area Masculina */
 
-#tituloareamasculino, #tituloareafeminina h3 {
+#tituloareaserv h3 {
     text-align: center;
     align-items: center;
     font-family: 'Inria Sans', sans-serif;
+    font-size: 32px;
     margin-top: 50px;
 }
 
@@ -267,8 +264,6 @@ button {
     padding: 0px 10px 10px 0px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
 }
-
-/* --------------------------------------------------------------------------------------- */
 
 /* Titulo de Produtos */
 
@@ -318,6 +313,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------------------- */
+
 
 /* Para todo o footer */
 
