@@ -264,6 +264,11 @@ footer h3 {
     justify-content: center;
 }
 
+/* REMOVER O SCROLL HORIZONTAL */
+::-webkit-scrollbar {
+    display: none;
+  }
+
 #divblock {
     background-color: #fff;
     border-radius: 10px;
@@ -275,6 +280,11 @@ footer h3 {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    left: 50%; /* mudar quando for para desktop */
+    right: 50%;
+    translate: -50% -50%;
+    top: 5vh;
 }
 
 #textoprodutos {
