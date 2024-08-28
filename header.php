@@ -1,17 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css" type="text/css">
-    </head>
-    <body>
-        <header id="header">         
-                <div id="imgheader">
-                    <img id="logo" src="multimidia/logosalaoheader.jpg" alt="">
-                </div>
-                <h2 id="Logoheader">Salão Novo Estilo</h2>
-        </header>
-    </body>
-    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css" type="text/css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <img src="multimidia/mobile/logosalaoheadermobile.jpg" class="rounded mx-auto d-block" alt="...">
+        <div id="titleheader">
+            <h1 id="nomesalao">Salão Novo Estilo</h1>
+        </div>
+    </div>
+</body>
+
+</html>

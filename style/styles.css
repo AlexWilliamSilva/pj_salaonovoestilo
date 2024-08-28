@@ -1,0 +1,372 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inria Sans', sans-serif;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Header Mobile */
+.header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header img {
+    margin-top: 30px;
+    max-width: 100%; /* Responsivo */
+    height: auto; /* Responsivo */
+}
+
+#titleheader {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+#nomesalao {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Inria Serif', serif;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Nav Mobile */
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.botaologin {
+    font-size: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    padding: 0.3em 1.1em;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.5em;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.botaologin:active {
+    transform: scale(0.85);
+}
+
+.botaologin:hover {
+    background-color: #fff;
+}
+
+.nav-link {
+    margin-left: 1em;
+    font-family: 'Inria Serif', serif;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+.nav-link:active {
+    transform: scale(0.85);
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Footer Mobile */
+footer {
+    background-color: #6C6C6C24;
+    margin-top: 64px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer h4 {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Inria Serif', serif;
+    margin-top: 10px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+}
+
+footer li {
+    font-size: 12px !important;
+}
+
+footer h3 {
+    font-family: 'Inria Serif', serif;
+    font-size: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.social-icons a {
+    margin-right: 0.3em;
+    padding-right: 5px;
+    margin-top: -10px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* Serviços */
+#titlefooterservico {
+    margin-top: 50px;
+}
+
+#hr-servico {
+    border: #000000 solid 1px;
+    width: 185px;
+    margin: 20px auto;
+}
+
+#texto-p p {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: -5px;
+    margin-left: 10px;
+}
+
+.inline-footer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Localização e Contato */
+#localizacaofooter {
+    margin-left: 10px;
+    text-align: center;
+}
+
+#localizacaofooter li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+#hr-localizacao-contato {
+    border: #000 solid 1px;
+    width: 10.5em;
+    margin: 20px auto;
+}
+
+.inline-footer2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#contatofooter {
+    padding-left: 5px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Página Index-Mobile */
+.Artistaindex h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+#imgartistaindex {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#botaoartista {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#botaocssartista {
+    border: none;
+    background-color: #DF0000;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Serviços-Index */
+.Servicoindex {
+    background-color: #f6f6f6;
+}
+
+.Servicoindex h1 {
+    margin-top: 68px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Página Produtos-Mobile */
+
+
+#fundoproduto {
+    background-color: #f6f6f6;
+    padding-top: 10px;
+    
+}
+
+#fundoproduto h1 {
+    font-family: 'Inria Sans', sans-serif;
+    text-align: center;
+    color: #000;
+    margin-bottom: 92px;
+    margin-top: 41px;
+}
+
+#fundoproduto hr {
+    border: #000 solid 1px;
+    width: 250px;
+    margin: -80px auto 60px auto;
+}
+
+#divblockconjunto {
+    margin: 0 auto;
+}
+
+#divblockconjunto #divblock {
+    display: inline-flex;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#divblock {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+    padding: 20px;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#textoprodutos {
+    font-size: 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#imgprod {
+    border: solid #fff thin;
+    border-radius: 10px;
+    margin: 22px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Página Serviços-Mobile */
+#tituloservico h1 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.AreaMasculina, .AreaFeminina {
+    background-color: #f6f6f6;
+    padding: 0 10px;
+}
+
+.AreaMasculina, .AreaFeminina h2 {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 24px;
+    color: #00000090;
+}
+
+#divblockmasculino, #divblockfeminino {
+    margin: 0 auto 29px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#textoservicomasculino h4 {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 20px;
+    color: #004197;
+}
+
+#textoservicofeminino h4 {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 20px;
+    color: #DF0000;
+}
+
+#textoservicomasculino p, #textoservicofeminino p {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Página Sobre-Mobile */
+#textocarrossel p {
+    font-size: 100px;
+    color: #000;
+    text-align: center;
+}
+
+
+@media (max-width: 844px) and (max-height: 320px) {
+
+    #divblock {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+        padding: 100px;
+        width: 300px;
+        height: auto;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
