@@ -86,47 +86,6 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------- */
 
-/* Footer Mobile */
-footer {
-    background-color: #6C6C6C24;
-    margin-top: 64px;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-footer h4 {
-    color: #000;
-    font-size: 16px;
-    font-family: 'Inria Serif', serif;
-    margin-top: 10px;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
-}
-
-footer li {
-    font-size: 12px !important;
-}
-
-footer h3 {
-    font-family: 'Inria Serif', serif;
-    font-size: 20px;
-}
-
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.social-icons a {
-    margin-right: 0.3em;
-    padding-right: 5px;
-    margin-top: -10px;
-    color: #000;
-    text-decoration: none;
-}
 
 /* ----------------------------------------------------------------------------------------------------- */
 
@@ -256,29 +215,34 @@ footer h3 {
 /* REMOVER O SCROLL HORIZONTAL */
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .position-relative {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
     padding: 20px;
-    width: 360px;   
+    width: 360px;
     margin-bottom: 23px;
 }
 
 #textoprodutos {
+    display: flex;
     font-size: 15px;
-    margin: 20px 0;
     text-align: center;
 }
 
 #imgprod {
+    display: flex;
     border: solid #fff thin;
     border-radius: 10px;
-    margin: 22px;
+    margin: 22px 17px 12px 17px;
     max-width: 100%;
     height: auto;
+}
+
+#imgprod #textoprodutos {
+    display: block;
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -340,7 +304,132 @@ footer h3 {
 
 /* Página Sobre-Mobile */
 
+/* titulo sobre nos */
+#titlesobrenos h1 {
+    font-family: 'Inria Sans', sans-serif;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
 
+#titlesobrenos hr {
+    border: #000 solid 1px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 73px;
+}
+
+
+/* parte da localização */
+.localizacaodiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: auto;
+    border-radius: 10px;
+    width: 380px; 
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+}
+
+#titulosalaosobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 16px;
+}
+
+#imgsalaosobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+    margin-top: 14px;
+}
+
+#localizacaosalaodisplay {
+    margin-bottom: -20px;
+}
+
+#localizacaosalao {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    margin-right: 21px;
+    display: flex;
+    float: right;
+    width: 200px; 
+    height: 85px;
+}
+
+.nomesalao h4, p {
+    margin-top: 37px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: -5px;
+}   
+
+#localizacaoendereco p {
+    position: relative;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+/* parte do artista */
+
+.artistadiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: auto;
+    border-radius: 10px;
+    width: 300px; 
+    margin: 10% auto;
+}
+
+.titleartistasobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 16px;
+}
+
+.titleartistasobre hr {
+    border: #000 solid 1px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 21px;
+}
+
+#img-artistasobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+}
+
+
+/* tabela da agenda*/
+.table .agenda {
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+.table tr {
+    font-size: 10px;
+    background-color: #000;
+    border: 1px solid #000;
+    font-family: 'Inria Serif', serif;
+}
+.table {
+    margin-left: 5px;
+    margin-right: 5px;
+} 
+
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
 @media (max-width: 844px) and (max-height: 320px) {
 
     #divblock {

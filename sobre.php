@@ -3,130 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/sobre.css" type="text/css">
+    <link rel="stylesheet" href="style/styles.css" type="text/css">
     <title>Sobre - Salão Novo Estilo Itapira</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        
-
-/* sobre */
-#mainsobre {
-    background-color: #F6F6F6; 
-     
-}
-
-#mainsobre h1 {
-    font-family: 'Inria Sans', sans-serif;
-    text-align: center;
-    color: #000;
-    margin-bottom: 5px;
-    padding: 40px 0px 0px 0px;
-}
-
-#mainsobre hr {
-    border: #000 solid 1px;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 60px;
-}
-
-#localizacao {
-    background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
-    padding-bottom: 50px;
-    padding-top: 20px;
-    border-radius: 10px;
-    
-
-}
-
-#localizacao h2 {
-    font-family: 'Inria Serif', serif;
-    text-align: center;
-    font-size: 30px;
-    padding-top: 35px;
-
-}
-
-#localizacao img {
-
-}
-
-#localizacao hr {
-    margin-top: 400px;
-    width: 90%;
-    
-}
-#localizacaosalao {
-    display: flex;
-    float: right;
-    width: 200px; 
-    height: 100px;
-    
-}
-
-#nomesalao h4 {
-    
-    font-size: 20px;
-}
-#nomesalao hr {
-    width: 40%;
-    margin-top: 2px;
-    margin-bottom: 3px;
-}
-
-#nomesalao p {
-    font-size: 15px;
-    text-align: center;
-    margin-top: ;
-}
-
-#localizacaoendereco {
-    background-color: #D9D9D9;
-    padding: 1px 1px ;
-    border-radius: 10px;
-    margin-top: 20%;
-
-}
-
-#localizacaoendereco p {
-    font-size: 17px;
-    margin-top: 10px;
-}
-
-#artista {
-    margin-top: 50px;
-    background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
-    height: 500px;
-    border-radius: 30px;
-    width: 400px; 
-    margin: 10% auto;
-}
-#artista h2 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 2px;
-}
-
-#artista hr {
-    margin-top: 1px;
-}
-
-#artista a {
-    font-size: 20px;
-}
-
-#agenda {
-    margin-top: 100px;
-}
-#botaosaibamais {
-   
-    font-size: 20px;
-}
-
-    </style>
 </head>
 <body>
 
@@ -135,47 +15,109 @@
             require_once "nav.php";
         ?>
         
-        <main id="mainsobre">
+        <main class="mainsobre">
 
-            <h1>Sobre Nós</h1>
-            <hr>
-
-            <div id="localizacao">
-                    
-                <h2>Salão Novo Estilo</h2>
-
-                <img src="" alt="">
+            <div id="titlesobrenos">
+                <h1>Sobre Nós</h1>
                 <hr>
-                   
-              
-                    <iframe id="localizacaosalao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116982.06926906556!2d-46.69724903042975!3d-23.615460260218466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58838f2edaf1%3A0x4a05fe85807b143f!2sDivis%C3%A3o%20de%20Vigil%C3%A2ncia%20de%20Zoonoses%20-%20DVZ!5e0!3m2!1spt-BR!2sbr!4v1724283117365!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                   
-
-                <div id="nomesalao">   
-
-                    <h4>Salão Novo Estilo</h4>
-                    <hr>
-                        <p>Salão de Beleza</p>
-
-                    <div id="localizacaoendereco">
-                        <p>R. Pedro Baston, 176 - Jose Tonolli, Itapira - SP,<br> 13973-729</p>
-                    </div>
-
-                </div>      
-                  
             </div>
 
-            <div id="artista">
+            <div class="localizacaodiv">
+                        
+                <div id="titulosalaosobre">    
+                    <h2>Salão Novo Estilo</h2>
+                </div>
+                    
+                <div id="imgsalaosobre">
+                    <img src="multimidia/mobile/Midiamobile.jpg" alt="">
+                </div>
+                               
+                <div id="localizacaosalaodisplay">
+                    <iframe id="localizacaosalao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.2531441744127!2d-46.795096224658856!3d-22.457119579574247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c902f8a770d707%3A0xf39ef5bb98a3baef!2sSal%C3%A3o%20Novo%20Estilo!5e0!3m2!1spt-BR!2sbr!4v1724893539614!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-                <h2>Artista</h2>
-                <hr>
+                <div class="nomesalao">   
 
-                <img src="" alt="">
+                    <h4>Salão Novo Estilo</h4>
+                    <p>Salão de Beleza</p> 
+                        
+                </div> 
 
-               <div id="botaosaibamais">
-                    <button>Saiba Mais</button>
-                    </div>            
-            </div>         
+                <div id="localizacaoendereco">
+                    <p>R. Pedro Baston, 176 - Jose Tonolli, Itapira - SP,<br> 13973-729</p>
+                </div>
+                    
+            </div>
+
+            <div class="artistadiv">
+
+                <div class="titleartistasobre">
+                    <h2>Artista</h2>
+                    <hr>
+                </div>
+
+                <div id="img-artistasobre">
+                    <img src="multimidia/mobile/artistamobile.jpg" alt="">
+                </div>
+              
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                    <div id="">
+                        <p>Saiba Mais</p>
+                    </div>
+                </button>
+                      
+            </div> 
+
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                  
+                   <th  class="agenda"scope="col"></th>
+                   <th  class="agenda"scope="col"></th>
+                   <th  class="agenda"scope="col"></th>
+                   <th  class="agenda" scope="col">Agenda</th>
+                   <th  class="agenda"scope="col"></th>
+                   <th  class="agenda"scope="col"></th>
+                   <th  class="agenda"scope="col"></th>
+                </tr>
+            </thead>
+            
+            <thead class="thead-light">
+                <tr>
+                <th scope="col">Segunda</th>
+                <th scope="col">Terça</th>
+                <th scope="col">Quarta</th>
+                <th scope="col">Quinta</th>
+                <th scope="col">Sexta</th>
+                <th scope="col">Sábado</th>
+                <th scope="col">Domingo</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>14:00 as 19:00</td>
+                <td>9:00 as 11:30 </td>
+                <td>9:00 as 11:30 </td>
+                <td>9:00 as 11:30 </td>
+                <td>9:00 as 11:30 </td>
+                <td>8:30 as 19:00</td>
+                <td>Dispensado</td>     
+                </tr>
+                <tr>
+                
+                <td></td>
+                <td>14:00 as 19:00</td>
+                <td>14:00 as 19:00</td>
+                <td>14:00 as 19:00</td>
+                <td>14:00 as 19:00</td>
+                <td></td>
+                <td></td> 
+                </tr>
+            
+            </table>
+                    
 
         </main>
 

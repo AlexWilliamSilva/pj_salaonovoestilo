@@ -15,6 +15,7 @@
       require_once "header.php";
       require_once "nav.php";
   ?>
+  
   <main class="p-3 mb-2 bg-body-tertiary">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -65,7 +66,7 @@
       <h1>Artista</h1>
 
       <div id="imgartistaindex">
-        <img src="multimidia/artistamobile.jpg" alt="">
+        <img src="multimidia/mobile/artistamobile.jpg" alt="">
       </div>
 
       <div id="botaoartista">
