@@ -21,28 +21,28 @@
       <div class="carousel-inner">
 
         <div class="carousel-item active">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
+          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
             <p class="text-center">Seu cabelo, nosso talento.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
+          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
             <p class="text-center">Aqui é Onde os sonhos capilares se tornam realidade.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
+          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
             <p class="text-center">Onde a arte do cabelo encontra a ciência da beleza.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
+          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
             <p class="text-center">Realçando sua beleza natural com cada toque.</p>
           </div>

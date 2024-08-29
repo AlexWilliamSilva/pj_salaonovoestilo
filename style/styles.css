@@ -149,6 +149,12 @@ body {
 
 /* Página Index-Mobile */
 
+.p-3 {
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+}
+
 #textocarrossel p{
     z-index: 1;
     font-size: 24px;
@@ -157,6 +163,10 @@ body {
 
 .carousel-inner > #textocarrossel {
     position: fixed;
+}
+
+#imgcarousel {
+    width: 100%;
 }
 
 .Artistaindex h1 {
@@ -168,6 +178,7 @@ body {
     margin-top: 40px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 #botaoartista {
