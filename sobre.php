@@ -12,7 +12,8 @@
 
 /* sobre */
 #mainsobre {
-    background-color: #F6F6F6;   
+    background-color: #F6F6F6; 
+     
 }
 
 #mainsobre h1 {
@@ -25,7 +26,7 @@
 
 #mainsobre hr {
     border: #000 solid 1px;
-    width: 200px;
+    width: 50%;
     margin: auto;
     margin-bottom: 60px;
 }
@@ -33,14 +34,17 @@
 #localizacao {
     background-color: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
-    padding-bottom: 250px;
-    padding-top: 10px
+    padding-bottom: 50px;
+    padding-top: 20px;
+    border-radius: 10px;
+    
 
 }
 
 #localizacao h2 {
+    font-family: 'Inria Serif', serif;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 35px;
 
 }
@@ -51,36 +55,43 @@
 
 #localizacao hr {
     margin-top: 400px;
-    width: 380px;
+    width: 90%;
     
 }
 #localizacaosalao {
     display: flex;
     float: right;
+    width: 200px; 
+    height: 100px;
+    
 }
+
 #nomesalao h4 {
-    font-size: 25px;
-    margin-top: 220px;
-    margin-bottom: -2px;
+    
+    font-size: 20px;
 }
 #nomesalao hr {
-    width: 300px;
+    width: 40%;
     margin-top: 2px;
+    margin-bottom: 3px;
 }
 
 #nomesalao p {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
+    margin-top: ;
 }
 
 #localizacaoendereco {
     background-color: #D9D9D9;
-    border: #D9D9D9 solid 1px;
+    padding: 1px 1px ;
     border-radius: 10px;
+    margin-top: 20%;
+
 }
 
 #localizacaoendereco p {
-    font-size: 20px;
+    font-size: 17px;
     margin-top: 10px;
 }
 
@@ -89,6 +100,9 @@
     background-color: #fff;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
     height: 500px;
+    border-radius: 30px;
+    width: 400px; 
+    margin: 10% auto;
 }
 #artista h2 {
     font-size: 30px;
@@ -106,6 +120,10 @@
 
 #agenda {
     margin-top: 100px;
+}
+#botaosaibamais {
+   
+    font-size: 20px;
 }
 
     </style>
@@ -129,15 +147,15 @@
                 <img src="" alt="">
                 <hr>
                    
-                <div id="localizacaosalao">   
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116982.06926906556!2d-46.69724903042975!3d-23.615460260218466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58838f2edaf1%3A0x4a05fe85807b143f!2sDivis%C3%A3o%20de%20Vigil%C3%A2ncia%20de%20Zoonoses%20-%20DVZ!5e0!3m2!1spt-BR!2sbr!4v1724283117365!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>         
+              
+                    <iframe id="localizacaosalao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116982.06926906556!2d-46.69724903042975!3d-23.615460260218466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58838f2edaf1%3A0x4a05fe85807b143f!2sDivis%C3%A3o%20de%20Vigil%C3%A2ncia%20de%20Zoonoses%20-%20DVZ!5e0!3m2!1spt-BR!2sbr!4v1724283117365!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   
 
                 <div id="nomesalao">   
 
                     <h4>Salão Novo Estilo</h4>
                     <hr>
-                    <p>Salão de Beleza</p>
+                        <p>Salão de Beleza</p>
 
                     <div id="localizacaoendereco">
                         <p>R. Pedro Baston, 176 - Jose Tonolli, Itapira - SP,<br> 13973-729</p>
@@ -154,10 +172,9 @@
 
                 <img src="" alt="">
 
-                <div>
+               <div id="botaosaibamais">
                     <button>Saiba Mais</button>
-                </div>
-
+                    </div>            
             </div>         
 
         </main>

@@ -15,35 +15,35 @@
       require_once "header.php";
       require_once "nav.php";
   ?>
-  <main>
+  <main class="p-3 mb-2 bg-body-tertiary">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
         <div class="carousel-item active">
           <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p>Seu cabelo, nosso talento.</p>
+            <p class="text-center">Seu cabelo, nosso talento.</p>
           </div>
         </div>
 
         <div class="carousel-item">
           <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Aqui é Onde os sonhos capilares se tornam realidade.</p>
+          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
+            <p class="text-center">Aqui é Onde os sonhos capilares se tornam realidade.</p>
           </div>
         </div>
 
         <div class="carousel-item">
           <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Onde a arte do cabelo encontra a ciência da beleza.</p>
+          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
+            <p class="text-center">Onde a arte do cabelo encontra a ciência da beleza.</p>
           </div>
         </div>
 
         <div class="carousel-item">
           <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Realçando sua beleza natural com cada toque.</p>
+          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
+            <p class="text-center">Realçando sua beleza natural com cada toque.</p>
           </div>
         </div>
 

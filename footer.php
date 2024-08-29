@@ -18,8 +18,6 @@
 
     <!-- Footer -->
     <footer class="footer text-center text-md-start">
-     
-            
             <div class="row">
                 <div class="inline-footer">
                     <!-- Logo and Social Icons -->
@@ -78,8 +76,6 @@
                     </div>
     
                 </div>
-           
-
         </div>
     </footer>
 
