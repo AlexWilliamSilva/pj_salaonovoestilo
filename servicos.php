@@ -19,6 +19,7 @@
 
         <div id="tituloservico">
             <h1>Serviços</h1>
+            <hr>
         </div>
 
             <section class="AreaMasculina">
