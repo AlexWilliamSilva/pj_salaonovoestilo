@@ -269,38 +269,49 @@ footer {
     color: #000;
 }
 
+#col {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
+    width: 380px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+}
+
+#imgprod img {
+    display: block;
+    border: solid #fff thin;
+    border-radius: 10px;
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}   
+
+#textoprodutos {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+   
+}
+
+#imgprod #textoprodutos {
+    display: block;
+}
 
 /* REMOVER O SCROLL HORIZONTAL */
 ::-webkit-scrollbar {
     display: none;
 }
 
-.col {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
-    padding: 20px;
-    width: 360px;
-    margin-bottom: 23px;
-}
-
-#textoprodutos {
-    font-size: 8px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-#imgprod {
-    display: flex;
-    border: solid #fff thin;
-    border-radius: 10px;
+#titleprod hr {
+    border: #000 solid 1px;
+    width: 25%;
     margin: auto;
-    max-width: 100%;
-    height: auto;
-}
-
-#imgprod #textoprodutos {
-    display: inline;
+    margin-bottom: 73px;
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -309,18 +320,19 @@ footer {
 #tituloservico h1 {
     margin-top: 25px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 50px;
 }
 
 .AreaMasculina, .AreaFeminina {
     background-color: #f6f6f6;
     padding: 0 10px;
-    
 }
+
 .AreaMasculina {
     padding-top: 40px;
 }
+
 .AreaFeminina {
     width: auto;
     height: 790px;
@@ -572,28 +584,31 @@ footer {
         color: #000;
     }
 
-    .col {
-        display: inline-grid;
+    #col {
+        display: inline-flex;
         border-radius: 10px;
+        background-color: #fff;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
-        margin-bottom: 30px;
         padding: 20px;
-        
+        width: 480px;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 
     #textoprodutos {
-        font-size: 15px;
+        font-size: 25px;
         text-align: center;
-        margin-top: 30px;
-        
+        margin: 0 auto;
+        padding-top: 140px;
     }
     
-    #imgprod {
-        display: flex;
+    #imgprod img {
+        display: block;
         border: solid #fff thin;
         border-radius: 10px;
-        margin: auto;
-        max-width: 100%;
+        margin-top: 22px;
+        margin-bottom: 22px;
+        max-width: 205px;
         height: auto;
     }
 
@@ -616,14 +631,6 @@ footer {
     /* fecha produtos */
 /*----------------------------------------------------------------------------------------------------------------- */  
      /* serviços */
-
-     #tituloservico hr {
-        border: #000 solid 1px;
-        width: 25%;
-        margin: 0 auto;
-        margin-bottom: 50px;
-    }
-
     
 
     /* fecha serviços */
@@ -693,49 +700,45 @@ footer {
         /* fecha footer */
 }
 
-@media (max-width: 575px) {
-    /* Página Produtos-Mobile */
+@media (min-width: 619px) {
+    #tituloservico h1 {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 50px;
+     }
 
-#titleprod h1 {
-    display: block;
-    margin: 0 auto;
-    font-family: 'Inria Sans', sans-serif;
-    text-align: center;
-    color: #000;
-}
+     #tituloservico hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    #divblockmasculino, #divblockfeminino {
+        margin: 0 auto 29px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+        padding: 20px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+    }
 
+    .AreaMasculina {
+        display: block;
+    }
 
-/* REMOVER O SCROLL HORIZONTAL */
-::-webkit-scrollbar {
-    display: none;
-}
+    .divblock-desloc1 {
+        margin-left: 150px;
+        display: block;
+        float: left;
+    }
 
-.col {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
-    padding: 20px;
-    width: 360px;
-    margin-bottom: 23px;
-}
-
-#textoprodutos {
-    font-size: 8px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-#imgprod {
-    display: flex;
-    border: solid #fff thin;
-    border-radius: 10px;
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-}
-
-#imgprod #textoprodutos {
-    display: inline;
-}
-
+    .divblock-desloc2 {
+        
+    }
 }

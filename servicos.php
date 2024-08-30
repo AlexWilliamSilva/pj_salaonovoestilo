@@ -22,57 +22,63 @@
             <hr>
         </div>
 
-            <section class="AreaMasculina">
+            <section class="AreaMasculina" class="grid text-center" style="row-gap: 0;">
                 <h2>Serviços na área Masculina</h2>
 
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4 class="servicos">Progressiva Masculino</h4>
-                        <p>Alisamento e tratamento para cabelos masculinos.</p>
+                <div class="divblock-desloc1">
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4 class="servicos">Progressiva Masculino</h4>
+                            <p>Alisamento e tratamento para cabelos masculinos.</p>
+                        </div>
+                    </div>
+
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4  class="servicos">Cortes de Cabelo Masculino</h4>
+                            <p>Cortes clássicos e modernos para atender ao seu estilo e personalidade.</p>
+                        </div>
+                    </div>
+
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4>Luzes Masculino</h4>
+                            <p>Serviço de luzes para realçar o visual dos cabelos masculinos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divblock_desloc2">
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4>Sobrancelha masculina</h4>
+                            <p>Design e cuidados para manter a sobrancelha masculina alinhada.</p>
+                        </div>
+                    </div>
+
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4>Relaxamento Capilar masculino</h4>
+                            <p>Tratamento para relaxar os fios e facilitar o penteado.</p>
+                        </div>
+                    </div>
+
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4>Barba</h4>
+                            <p>Modelagem, aparo e cuidados completos para a barba.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4  class="servicos">Cortes de Cabelo Masculino</h4>
-                        <p>Cortes clássicos e modernos para atender ao seu estilo e personalidade.</p>
+                <div class="divblock_desloc3">
+                    <div id="divblockmasculino">
+                        <div id="textoservicomasculino">
+                            <h4>Limpeza de Pele</h4>
+                            <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
+                        </div>
                     </div>
-                </div>
-
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4>Luzes Masculino</h4>
-                        <p>Serviço de luzes para realçar o visual dos cabelos masculinos.</p>
-                    </div>
-                </div>
-
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4>Sobrancelha masculina</h4>
-                        <p>Design e cuidados para manter a sobrancelha masculina alinhada.</p>
-                    </div>
-                </div>
-
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4>Relaxamento Capilar masculino</h4>
-                        <p>Tratamento para relaxar os fios e facilitar o penteado.</p>
-                    </div>
-                </div>
-
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4>Barba</h4>
-                        <p>Modelagem, aparo e cuidados completos para a barba.</p>
-                    </div>
-                </div>
-
-                <div id="divblockmasculino">
-                    <div id="textoservicomasculino">
-                        <h4>Limpeza de Pele</h4>
-                        <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
-                    </div>
-                </div>
+                </div>    
 
             </section>
 
