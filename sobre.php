@@ -30,7 +30,11 @@
                 </div>
                     
                 <div id="imgsalaosobre">
-                    <img src="multimidia/mobile/Midiamobile.jpg" alt="">
+                    <picture>
+                        <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
+                        <img src="multimidia/mobile/Midiamobile.jpg" alt="">
+                    </picture>
+                    <hr>
                 </div>
                                
                 <div id="localizacaosalaodisplay">
@@ -40,6 +44,7 @@
                 <div class="nomesalao">   
 
                     <h4>Salão Novo Estilo</h4>
+                    <hr>
                     <p>Salão de Beleza</p> 
                         
                 </div> 
@@ -58,11 +63,14 @@
                 </div>
 
                 <div id="img-artistasobre">
-                    <img src="multimidia/mobile/artistamobile.jpg" alt="">
+                    <picture>
+                        <source media="(min-width: 620px)" srcset="multimidia/artista.jpg">
+                        <img src="multimidia/mobile/artistamobile.jpg" alt="">
+                    </picture>
                 </div>
-              
+                
                 <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                    <div id="">
+                    <div id="botaoartistasobre">
                         <p>Saiba Mais</p>
                     </div>
                 </button>

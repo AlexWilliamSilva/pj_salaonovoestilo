@@ -391,11 +391,7 @@ footer {
 
 /* titulo sobre nos */
 
-.mainsobre {
-    min-width: 320px;
-    max-width: 800px;
-    margin: auto;
-}
+
 
 #titlesobrenos h1 {
     font-family: 'Inria Sans', sans-serif;
@@ -403,11 +399,12 @@ footer {
     color: #000;
     margin-bottom: 5px;
     margin-top: 15px;
+    font-size: 30px;
 }
 
 #titlesobrenos hr {
     border: #000 solid 1px;
-    width: 50%;
+    width: 25%;
     margin: auto;
     margin-bottom: 73px;
 }
@@ -417,7 +414,7 @@ footer {
 .localizacaodiv {
     background-color: #fff;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
-    height: auto;
+    height: 445px;
     border-radius: 10px;
     width: 380px; 
     padding-top: 20px;
@@ -430,7 +427,7 @@ footer {
     font-family: 'Inria Serif', serif;
     text-align: center;
     font-size: 32px;
-    margin-top: 16px;
+    margin-top: 10px;
 }
 
 #imgsalaosobre img {
@@ -441,18 +438,14 @@ footer {
     margin-top: 14px;
 }
 
-#localizacaosalaodisplay {
-    margin-bottom: -20px;
-}
-
 #localizacaosalao {
     margin-top: 16px;
     margin-bottom: 40px;
     margin-right: 21px;
     display: flex;
     float: right;
-    width: 200px; 
-    height: 85px;
+    width: 205px; 
+    height: 115px;
 }
 
 .nomesalao h4, p {
@@ -465,7 +458,7 @@ footer {
 #localizacaoendereco p {
     position: relative;
     font-size: 12px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 /* parte do artista */
@@ -636,6 +629,124 @@ footer {
     /* fecha serviços */
 /*------------------------------------------------------------------------------------------------------------------------------ */
     /* sobre */
+
+    /* titulo sobre nos */
+    #titlesobrenos h1 {
+        font-family: 'Inria Sans', sans-serif;
+        text-align: center;
+        color: #000;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        font-size: 48px;
+    }
+
+    #titlesobrenos hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 73px;
+    }
+
+    /* parte da localização */
+    .localizacaodiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 1100px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    #titulosalaosobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    #imgsalaosobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 720px;  
+        margin-top: 14px;
+        margin-bottom: 40px;
+    }
+    
+    #imgsalaosobre hr {
+        border: #000 solid 1px;
+        width: 1000px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #localizacaosalao {
+        margin-top: 16px;
+        margin-bottom: 40px;
+        margin-right: 21px;
+        display: flex;
+        float: right;
+        width: 750px; 
+        height: 300px;
+    }
+
+    .nomesalao h4, p {
+        margin-top: 160px;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: -5px;
+    }   
+
+    .nomesalao hr {
+        border: #000 solid 1px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    #localizacaoendereco p {
+        position: relative;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* parte do artista */
+
+    .artistadiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 600px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    .titleartistasobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    .titleartistasobre hr {
+        border: #000 solid 1px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 21px;
+    }
+
+    #img-artistasobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 360px;  
+    }
+
+    #botaoartistasobre {
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+    }
 
     /* fecha sobre */
 /*---------------------------------------------------------------------------------------------------------------------------- */
