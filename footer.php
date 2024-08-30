@@ -11,61 +11,71 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bodyfooter">
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo and Serviços side by side -->
-                <div class="col-md-6 mb-4 d-flex flex-column align-items-center align-items-md-start">
-                    <div class="footer-logo">
-                        <img src="multimidia/mobile/logosalaofootermobile.png" alt="Logo">
-                        <h3>Salão Novo Estilo</h3>
-                        <div class="social-icons mt-3">
-                            <a href="#" target="_blank" class="fab fa-whatsapp"></a>
-                            <a href="#" target="_blank" class="fab fa-instagram"></a>
-                            <a href="#" target="_blank" class="fab fa-facebook-f"></a>
-                        </div>
+    <footer>
+        <div class="containerfooter">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <picture>
+                        <source media="(min-width: 620px)" srcset="multimidia/logosalaofooter.png">
+                        <img src="multimidia/mobile/logosalaofootermobile.png" alt="logo da barbearia no rodapé">
+                    </picture>
+                    <h3>Salão Novo Estilo</h3>
+                    <div class="social-icons mt-3">
+                        <a href="#" target="_blank" class="fab fa-whatsapp"></a>
+                        <a href="#" target="_blank" class="fab fa-instagram"></a>
                     </div>
                 </div>
 
-                <div class="col-md-6 mb-4 d-flex flex-column align-items-center align-items-md-start">
-                    <h4>Serviços</h4>
+                <!-- Contato -->
+                <div  id="contatofooter">
+                    <h4>Contato</h4>
                     <hr>
-                    <div id="texto-p">
-                        <p>Limpeza de pele</p>
-                        <p>Luzes/masculino</p>
-                        <p>Cortes cabelo masculino</p>
-                        <p>Cortes cabelo feminino</p>
-                        <p>Progressiva masculino</p>
-                        <p>Progressiva feminino</p>
-                        <p>Relaxamento capilar masculino</p>
-                        <p>Barba</p>
-                        <p>Sombrancelha masculino</p>
-                    </div>
+                    <ul class="list-unstyled">
+                        <li>Email: joseeucledes@hotmail.com</li>
+                        <li>Telefone: (19) 99367-8114</li>
+                    </ul>
                 </div>
-            </div>
 
-            <div class="row">
-                <!-- Localização -->
-                <div class="col-md-6 mb-4">
+                 <!-- Localização -->
+                 <div  id="localizacaofooter">
                     <h4>Localização</h4>
                     <hr>
                     <li>Rua Pedro Baston 176 Itapira - SP</li>
                 </div>
 
-                <!-- Contato -->
-                <div class="col-md-6 mb-4">
-                    <h4>Contato</h4>
+
+                <div id="servicosfooter">
+                    <h4>Serviços</h4>
                     <hr>
-                    <ul class="list-unstyled">
-                        <li>joseeucledes@hotmail.com</li>
-                        <li>Telefone: (19) 99367-8114</li>
+                    <div id="texto-p">
+                        <li>Limpeza de pele</li>
+                        <li>Luzes/masculino</li>
+                        <li>Cortes cabelo masculino</li>
+                        <li>Cortes cabelo feminino</li>
+                        <li>Progressiva masculino</li>
+                        <li>Progressiva feminino</li>
+                        <li>Relaxamento capilar masculino</li>
+                        <li>Barba</li>
+                        <li>Sombrancelha masculino</li>
+                    </div>
+                </div>
+
+                <div class="links-rapidos">
+                    <h4>Links rápidos</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Sobre</a></li>
                     </ul>
                 </div>
+
             </div>
         </div>
+        <p class="copyright">Copyright &copy; 2024 Salão Novo Estilo</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-7J9dD7nE4aR8ae5TW5PH4mF2N5H9Rp/zF3Y3wU5xj5eIz+5mM9oKNhA70Z7PfFNOe" crossorigin="anonymous"></script>

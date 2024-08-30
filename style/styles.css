@@ -88,35 +88,82 @@ body {
 
 /* footer Mobile */
 
-.footer {
-    background-color: #6C6C6C24;
+.bodyfooter * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inria Serif', serif;
+}
+
+footer li {
+    font-size: 12px;
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.containerfooter {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+footer {
+    background-color: #6C6C6C24;
+    color: #000;
+    padding: 10px 0 0;
+    margin-top: 363px;
+}
+
+.footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.footer h4 {
-    color: #000;
-    font-size: 16px;
-    font-family: 'Inria Serif', serif;
-    margin-top: 10px;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
-}
-
-.footer li {
-    font-size: 12px;
-    list-style: none;
-}
-
-.footer h3 {
-    font-family: 'Inria Serif', serif;
-    font-size: 20px;
-}
-
 .footer-logo img {
-    max-width: 100%;
-    height: auto;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-logo p {
+    width: 300px;
+    color: #000;
+    margin: 0 auto;
+}
+
+.links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
+    margin-top: 20px;
+}
+
+.links-rapidos h4, #contatofooter h4, #localizacaofooter h4, #servicosfooter h4 {
+    margin-bottom: 20px;
+}
+
+.links-rapidos li {
+    margin-bottom: 10px;
+}
+
+.links-rapidos a {
+    color: #000;
+}
+
+#contatofooter li {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    color: #000;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.copyright {
+    background-color: #ced4da;
+    padding: 10px;
+    text-align: center;
 }
 
 .social-icons a {
@@ -132,61 +179,35 @@ body {
     margin-top: 10px;
 }
 
-/* FOOTER - Serviços */
-#titlefooterservico {
-    margin-top: 50px;
-}
-
 #hr-servico {
     border: #000000 solid 1px;
     width: 185px;
     margin: 20px auto;
 }
 
-#texto-p p {
+/**/
+
+/* FOOTER - Serviços */
+
+
+
+/*#texto-p p {
     font-size: 12px;
     text-align: left;
     margin-bottom: -5px;
     margin-left: 10px;
-}
-
-.inline-footer {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+}*/
 
 /* Localização e Contato */
 #localizacaofooter {
-    margin-left: 10px;
     text-align: center;
 }
 
 #localizacaofooter li {
     list-style: none;
-    margin-right: 10px;
 }
 
-#hr-localizacao-contato {
-    border: #000 solid 1px;
-    width: 10.5em;
-    margin: 20px auto;
-}
 
-.inline-footer2 {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#contatofooter {
-    padding-left: 5px;
-    text-align: center;
-}
 
 /* --------------------------------------------------------------------------------------------------------------- */
 
@@ -218,7 +239,7 @@ body {
     width: 100%;
 }
 
-#botaoartista {
+#botaoartista, #botaoservicos {
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -227,6 +248,15 @@ body {
 #botaocssartista {
     border: none;
     background-color: #DF0000;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+
+#botaocssservicos {
+    border: none;
+    background-color: #0044D7;
     border-radius: 10px;
     padding: 10px 30px;
     text-align: center;
@@ -595,13 +625,63 @@ body {
 
     /* fecha sobre */
 /*---------------------------------------------------------------------------------------------------------------------------- */
-    /* footer */
 
-    .footer {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    /* fecha footer */
 /*------------------------------------------------------------------------------------------------------------------------------------------ */
+}
+
+@media (min-width: 768px) {
+        /* footer */
+
+        .footer-content {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        footer {
+            padding: 20px 0 0;
+        }
+
+        #servicosfooter hr {
+            margin-top: 10px;
+        }
+
+        #contatofooter {
+            justify-content: start;
+        }
+
+        .footer-logo {
+            border-right: 1px solid #6C6C6C24;
+        }
+
+        .links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
+            margin-top: 20px;
+        }
+        
+        .links-rapidos h4, #contatofooter h4, #localizacaofooter h4, #servicosfooter h4 {
+            margin-bottom: 20px;
+        }
+        
+        .links-rapidos li {
+            margin-bottom: 10px;
+        }
+        
+        .links-rapidos a {
+            color: #000;
+        }
+        
+        #contatofooter li {
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+            color: #000;
+            font-weight: 200;
+            justify-content: center;
+        }
+        
+        .copyright {
+            background-color: #ced4da;
+            padding: 10px;
+            text-align: center;
+        }
+        /* fecha footer */
 }
