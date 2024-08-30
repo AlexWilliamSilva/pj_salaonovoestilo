@@ -4,61 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <link rel="stylesheet" href="style/styles.css" type="text/css">
     <title>Footer</title>
+    <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Footer Styling */
-        footer {
-            background-color: #6C6C6C24;
-            margin-top: 64px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        footer h4 {
-            color: #000;
-            font-size: 16px;
-            font-family: 'Inria Serif', serif;
-            margin-top: 10px;
-            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
-        }
-
-        footer li {
-            font-size: 12px !important;
-        }
-
-        footer h3 {
-            font-family: 'Inria Serif', serif;
-            font-size: 20px;
-        }
-
-        .footer-logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .social-icons a {
-            margin-right: 0.5em;
-            color: #000;
-            text-decoration: none;
-            font-size: 24px;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        
-    </style>
 </head>
-
 <body>
 
     <!-- Footer -->

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Salão Novo Estilo Itapira</title>
+  <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
   <link rel="stylesheet" href="style/styles.css" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -21,30 +22,42 @@
       <div class="carousel-inner">
 
         <div class="carousel-item active">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          <picture>
+            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg" >
+            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p class="text-center">Seu cabelo, nosso talento.</p>
+            <p id="carouselblue">Seu cabelo, nosso talento.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          <picture>
+            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
+            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p class="text-center">Aqui é Onde os sonhos capilares se tornam realidade.</p>
+            <p id="carouselred">Aqui é Onde os sonhos capilares se tornam realidade.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          <picture>
+            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
+            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p class="text-center">Onde a arte do cabelo encontra a ciência da beleza.</p>
+            <p id="carouselblue">Onde a arte do cabelo encontra a ciência da beleza.</p>
           </div>
         </div>
 
         <div class="carousel-item">
-          <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          <picture>
+            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
+            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+          </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p class="text-center">Realçando sua beleza natural com cada toque.</p>
+            <p id="carouselred">Realçando sua beleza natural com cada toque.</p>
           </div>
         </div>
 
@@ -64,13 +77,16 @@
 
     <section class="Artistaindex">
       <h1>Artista</h1>
-
+        
       <div id="imgartistaindex">
-        <img src="multimidia/mobile/artistamobile.jpg" alt="">
-      </div>
+        <picture>
+          <source media="(min-width: 620px)" srcset="multimidia/artista.jpg">
+          <img src="multimidia/mobile/artistamobile.jpg" alt="">
+        </picture>
+        </div>
 
       <div id="botaoartista">
-        <a href="#">
+        <a href="sobre.php">
           <button id="botaocssartista">Saiba mais <img src="multimidia/icon/portaiconindex.png" alt="" id="imgportaindex"></button>
         </a>
       </div>

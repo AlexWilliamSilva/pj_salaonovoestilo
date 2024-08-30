@@ -12,14 +12,14 @@ body {
 /* --------------------------------------------------------------------------------------------------------------- */
 
 /* Header Mobile */
-.header {
+#header {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
 
-.header img {
+#header img {
     margin-top: 30px;
     max-width: 100%; /* Responsivo */
     height: auto; /* Responsivo */
@@ -32,7 +32,7 @@ body {
     margin-top: 40px;
 }
 
-#nomesalao {
+#nomesalao {  
     font-size: 24px;
     text-align: center;
     font-family: 'Inria Serif', serif;
@@ -55,7 +55,7 @@ body {
     border-radius: 0.5em;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /*animacao do botao*/
 }
 
 .botaologin:active {
@@ -63,11 +63,11 @@ body {
 }
 
 .botaologin:hover {
-    background-color: #fff;
+    background-color: #e1e1e1;
 }
 
 .nav-link {
-    margin-left: 1em;
+    margin-left: 1em;   
     font-family: 'Inria Serif', serif;
     font-size: 20px;
     position: relative;
@@ -86,10 +86,53 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------- */
 
+/* footer Mobile */
 
-/* ----------------------------------------------------------------------------------------------------- */
+.footer {
+    background-color: #6C6C6C24;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
-/* Serviços */
+.footer h4 {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Inria Serif', serif;
+    margin-top: 10px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.336);
+}
+
+.footer li {
+    font-size: 12px;
+    list-style: none;
+}
+
+.footer h3 {
+    font-family: 'Inria Serif', serif;
+    font-size: 20px;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.social-icons a {
+    margin-right: 0.5em;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* FOOTER - Serviços */
 #titlefooterservico {
     margin-top: 50px;
 }
@@ -149,12 +192,6 @@ body {
 
 /* Página Index-Mobile */
 
-.p-3 {
-    min-width: 320px;
-    max-width: 800px;
-    margin: auto;
-}
-
 #textocarrossel p{
     z-index: 1;
     font-size: 24px;
@@ -195,8 +232,6 @@ body {
     text-align: center;
 }
 
-/* --------------------------------------------------------------------------------------------------------------- */
-
 /* Serviços-Index */
 .Servicoindex {
     background-color: #f6f6f6;
@@ -216,11 +251,12 @@ body {
     font-family: 'Inria Sans', sans-serif;
     text-align: center;
     color: #000;
-    margin-bottom: 230px;
+    margin-bottom: 250px;
 }
 
 #positioncentral {
     display: block;
+    margin-bottom: -130px;
 }
 
 /* REMOVER O SCROLL HORIZONTAL */
@@ -238,22 +274,24 @@ body {
 }
 
 #textoprodutos {
-    display: flex;
     font-size: 15px;
     text-align: center;
+    margin-top: 30px;
+    
 }
 
 #imgprod {
     display: flex;
     border: solid #fff thin;
     border-radius: 10px;
-    margin: 22px 17px 12px 17px;
+    margin: auto;
     max-width: 100%;
     height: auto;
 }
 
 #imgprod #textoprodutos {
     display: block;
+   
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -263,15 +301,30 @@ body {
     margin-top: 25px;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 50px;
 }
 
 .AreaMasculina, .AreaFeminina {
     background-color: #f6f6f6;
     padding: 0 10px;
+    
 }
-
-.AreaMasculina, .AreaFeminina h2 {
-    margin-top: 48px;
+.AreaMasculina {
+    padding-top: 40px;
+}
+.AreaFeminina {
+    width: auto;
+    height: 790px;
+    padding-top: 40px;
+}
+.AreaMasculina h2 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #00000090;
+}
+.AreaFeminina h2 {
+    padding-bottom: 20px;
     text-align: center;
     font-size: 24px;
     color: #00000090;
@@ -316,6 +369,13 @@ body {
 /* Página Sobre-Mobile */
 
 /* titulo sobre nos */
+
+.mainsobre {
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+}
+
 #titlesobrenos h1 {
     font-family: 'Inria Sans', sans-serif;
     text-align: center;
@@ -421,37 +481,127 @@ body {
 
 
 /* tabela da agenda*/
-.table .agenda {
+
+#divagenda {
+    background-color: #fff;
+    box-shadow: 1px rgba(0, 0, 0, 0.336);
+    height: auto;
+    width: 380px; 
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+}
+
+#table #agenda {
     font-size: 20px;
     background-color: #000;
     color: #fff;
     font-family: 'Inria Serif', serif;
 }
-.table tr {
+#table tr {
     font-size: 10px;
-    background-color: #000;
+
     border: 1px solid #000;
     font-family: 'Inria Serif', serif;
 }
-.table {
-    margin-left: 5px;
-    margin-right: 5px;
+
+#table {
+    max-width: 100%;
 } 
 
 
-
 /* --------------------------------------------------------------------------------------------------------------- */
-@media (max-width: 844px) and (max-height: 320px) {
 
-    #divblock {
+/* MEDIA DESKTOP */
+
+@media (min-width: 620px) {
+    /* header */
+
+    #header {
+        display: block; 
+        margin: 0 auto; 
+        max-width: 100%;  
+        margin-top: 10px;      
+    }
+
+    #nomesalao {
+        font-size: 30px;
+        margin-top: -50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+    }
+ 
+    /* fecha header */
+/*--------------------------------------------------------------------------------------------------------------------------------- */
+    /* nav */
+
+    /* fecha nav */
+/*----------------------------------------------------------------------------------------------------------------------------- */
+
+    /* Index */
+
+    #textocarrossel p{
+        z-index: 1;
+        font-size: 64px;
+    }
+
+    #carouselblue {
+        color: #0000ff;
+    }
+
+    #carouselred {
+        color: #ff0000;
+    }
+
+    #textocarrossel {
+        margin: 0 auto;
+        margin-top: -100px;
+    }
+    /* fecha Index */
+
+/*----------------------------------------------------------------------------------------------------------------------------- */
+    /* produtos */
+     
+    #titleprod h1 {
+        font-family: 'Inria Sans', sans-serif;
+        text-align: center;
+        color: #000;
+        margin-bottom: 250px;
+    }
+
+     #positioncentral {
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+    .position-relative {
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
-        padding: 100px;
-        width: 300px;
-        height: auto;
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 400px;
+        margin-bottom: 23px;
+        max-width: 100%;
+    } 
+
+    /* fecha produtos */
+/*----------------------------------------------------------------------------------------------------------------- */  
+     /* serviços */
+
+    /* fecha serviços */
+/*------------------------------------------------------------------------------------------------------------------------------ */
+    /* sobre */
+
+    /* fecha sobre */
+/*---------------------------------------------------------------------------------------------------------------------------- */
+    /* footer */
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
     }
+
+    /* fecha footer */
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
 }

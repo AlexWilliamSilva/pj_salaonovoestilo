@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/styles.css" type="text/css">
     <title>Sobre - Salão Novo Estilo Itapira</title>
+    <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -66,58 +67,56 @@
                     </div>
                 </button>
                       
-            </div> 
+            </div>    
 
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                  
-                   <th  class="agenda"scope="col"></th>
-                   <th  class="agenda"scope="col"></th>
-                   <th  class="agenda"scope="col"></th>
-                   <th  class="agenda" scope="col">Agenda</th>
-                   <th  class="agenda"scope="col"></th>
-                   <th  class="agenda"scope="col"></th>
-                   <th  class="agenda"scope="col"></th>
-                </tr>
-            </thead>
-            
-            <thead class="thead-light">
-                <tr>
-                <th scope="col">Segunda</th>
-                <th scope="col">Terça</th>
-                <th scope="col">Quarta</th>
-                <th scope="col">Quinta</th>
-                <th scope="col">Sexta</th>
-                <th scope="col">Sábado</th>
-                <th scope="col">Domingo</th>
-
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                <td>14:00 as 19:00</td>
-                <td>9:00 as 11:30 </td>
-                <td>9:00 as 11:30 </td>
-                <td>9:00 as 11:30 </td>
-                <td>9:00 as 11:30 </td>
-                <td>8:30 as 19:00</td>
-                <td>Dispensado</td>     
-                </tr>
-                <tr>
+            <div id="divagenda">
+                <table id="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th id="agenda"scope="col"></th>
+                        <th id="agenda"scope="col"></th>
+                        <th id="agenda"scope="col"></th>
+                        <th id="agenda"scope="col">Agenda</th>
+                        <th id="agenda"scope="col"></th>
+                        <th id="agenda"scope="col"></th>
+                        <th id="agenda"scope="col"></th>
+                    </tr>
+                </thead>
                 
-                <td></td>
-                <td>14:00 as 19:00</td>
-                <td>14:00 as 19:00</td>
-                <td>14:00 as 19:00</td>
-                <td>14:00 as 19:00</td>
-                <td></td>
-                <td></td> 
-                </tr>
-            
-            </table>
-                    
+                <thead class="thead-light">
+                    <tr>
+                        <th id="letradias" scope="col">Segunda</th>
+                        <th id="letradias" scope="col">Terça</th>
+                        <th id="letradias" scope="col">Quarta</th>
+                        <th id="letradias" scope="col">Quinta</th>
+                        <th id="letradias" scope="col">Sexta</th>
+                        <th id="letradias" scope="col">Sábado</th>
+                        <th id="letradias" scope="col">Domingo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>14:00 as 19:00</td>
+                        <td>9:00 as 11:30 </td>
+                        <td>9:00 as 11:30 </td>
+                        <td>9:00 as 11:30 </td>
+                        <td>9:00 as 11:30 </td>
+                        <td>8:30 as 19:00</td>
+                        <td>Dispensado</td>     
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>14:00 as 19:00</td>
+                        <td>14:00 as 19:00</td>
+                        <td>14:00 as 19:00</td>
+                        <td>14:00 as 19:00</td>
+                        <td></td>
+                        <td></td> 
+                    </tr>
+                
+                </table>
+            </div>
 
         </main>
 
