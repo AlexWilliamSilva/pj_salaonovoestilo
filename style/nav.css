@@ -1,0 +1,45 @@
+
+/* Nav Mobile */
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.botaologin {
+    font-size: 20px;
+    font-family: 'Inria Sans', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #000;
+    background-color: #fff;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /*animacao do botao*/
+}
+
+.botaologin:active {
+    transform: scale(0.85);
+}
+
+.botaologin:hover {
+    background-color: #e1e1e1;
+}
+
+.nav-link {
+    margin-left: 1em;   
+    font-family: 'Inria Serif', serif;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+.nav-link:active {
+    transform: scale(0.85);
+}

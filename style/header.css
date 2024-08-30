@@ -1,0 +1,46 @@
+/* Header Mobile */
+#header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#header img {
+    margin-top: 30px;
+    max-width: 100%; /* Responsivo */
+    height: auto; /* Responsivo */
+}
+
+#titleheader {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+#nomesalao {  
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Inria Serif', serif;
+}
+
+@media (min-width: 620px) {
+    /* header */
+
+    #header {
+        display: block; 
+        margin: 0 auto; 
+        max-width: 100%;  
+        margin-top: 10px;      
+    }
+
+    #nomesalao {
+        font-size: 40px;
+        margin-top: -50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+       
+    }
+}

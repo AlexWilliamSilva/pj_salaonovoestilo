@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css" type="text/css">
+    <link rel="stylesheet" href="style/nav.css" type="text/css">
     <title>Navegação entre as páginas</title>
     <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
