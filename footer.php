@@ -66,10 +66,10 @@
                 <div class="links-rapidos">
                     <h4>Links rápidos</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Produtos</a></li>
-                        <li><a href="#">Sobre</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="servicos.php">Serviços</a></li>
+                        <li><a href="produtos.php">Produtos</a></li>
+                        <li><a href="sobre.php">Sobre</a></li>
                     </ul>
                 </div>
 

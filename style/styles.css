@@ -48,11 +48,12 @@ body {
 .botaologin {
     font-size: 20px;
     font-family: 'Inria Sans', sans-serif;
-    padding: 0.3em 1.1em;
+    padding-left: 10px;
+    padding-right: 10px;
     color: #000;
     background-color: #fff;
-    border: 1px solid #ced4da;
-    border-radius: 0.5em;
+    border: 10px solid #fff;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /*animacao do botao*/
@@ -89,10 +90,9 @@ body {
 /* footer Mobile */
 
 .bodyfooter * {
+    font-family: 'Inria Serif', serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inria Serif', serif;
 }
 
 footer li {
@@ -185,20 +185,6 @@ footer {
     margin: 20px auto;
 }
 
-/**/
-
-/* FOOTER - Serviços */
-
-
-
-/*#texto-p p {
-    font-size: 12px;
-    text-align: left;
-    margin-bottom: -5px;
-    margin-left: 10px;
-}*/
-
-/* Localização e Contato */
 #localizacaofooter {
     text-align: center;
 }
@@ -206,8 +192,6 @@ footer {
 #localizacaofooter li {
     list-style: none;
 }
-
-
 
 /* --------------------------------------------------------------------------------------------------------------- */
 
@@ -278,10 +262,11 @@ footer {
 /* Página Produtos-Mobile */
 
 #titleprod h1 {
+    display: block;
+    margin: 0 auto;
     font-family: 'Inria Sans', sans-serif;
     text-align: center;
     color: #000;
-    margin-bottom: 250px;
 }
 
 #positioncentral {
@@ -307,7 +292,6 @@ footer {
     font-size: 15px;
     text-align: center;
     margin-top: 30px;
-    
 }
 
 #imgprod {
@@ -321,7 +305,6 @@ footer {
 
 #imgprod #textoprodutos {
     display: block;
-   
 }
 
 /* --------------------------------------------------------------------------------------------------------------- */
@@ -555,7 +538,7 @@ footer {
     }
 
     #nomesalao {
-        font-size: 30px;
+        font-size: 40px;
         margin-top: -50px;
         margin-left: auto;
         margin-right: auto;
@@ -592,28 +575,56 @@ footer {
 
 /*----------------------------------------------------------------------------------------------------------------------------- */
     /* produtos */
-     
+
     #titleprod h1 {
+        display: block;
+        margin: 0 auto;
         font-family: 'Inria Sans', sans-serif;
         text-align: center;
         color: #000;
-        margin-bottom: 250px;
     }
 
-     #positioncentral {
-        display: flex;
-        flex-direction: row-reverse;
+    .col {
+        display: inline-block;
+        
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
+        margin-bottom: 30px;
+        padding: 20px;
         
     }
 
-    .position-relative {
-        background-color: #fff;
+    #textoprodutos {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 30px;
+        
+    }
+    
+    #imgprod {
+        display: flex;
+        border: solid #fff thin;
         border-radius: 10px;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
-        width: 400px;
-        margin-bottom: 23px;
+        margin: auto;
         max-width: 100%;
-    } 
+        height: auto;
+    }
+
+    #imgprod #textoprodutos {
+        display: block;
+    }
+
+    /* REMOVER O SCROLL HORIZONTAL */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #titleprod hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 73px;
+    }
 
     /* fecha produtos */
 /*----------------------------------------------------------------------------------------------------------------- */  
