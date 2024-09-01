@@ -63,15 +63,17 @@ footer li {
     padding-bottom: 30px;
 }
 
-.links-rapidos ul {
-    list-style-image: url('multimidia/icon/portaiconindex.png');
-}
-
 .links-rapidos a {
     color: #000;
     text-align: center;
     font-size: 18px;
     text-decoration: none;    
+}
+
+.links-rapidos ul li {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -35px;
 }
 
 #contatofooter {
@@ -87,13 +89,17 @@ footer li {
     list-style: none;
 }
 
+#texto-p ul li {
+    list-style-type: none;
+}
+
 #texto-p {
     margin-left:5em;   
 }
 
-#texto-p li{
-    text-align: left ;
-    
+#texto-p li {
+    text-align: center;
+    margin-left: -110px;
 }
 
 /* direitos autorais */
@@ -118,12 +124,24 @@ footer li {
         padding-bottom: 50px;
     }
 
+    .links-rapidos ul li {
+        list-type: none;
+        list-style-image: url('multimidia/icon/portaiconindex.png');
+        width: 34px;
+        height: 39px;
+    }
+
+    .links-li {
+        margin-left: 50px;
+    }
+
     #texto-p {
-        width: 65%;
+        text-align: center;
         margin-left: 4em;    
     }
+
     .titulo-sobre-footer {
-        font-size: 1vw;
+        font-size: 20px;
     }
 
     /* fecha footer */
@@ -145,7 +163,7 @@ footer li {
                     <h3>Salão Novo Estilo</h3>
                     
                     <div class="social-icons mt-3">
-                        <a href="#" target="_blank" class="fab fa-whatsapp"></a>
+                        <a href="https://wa.me/19993678114" target="_blank" class="fab fa-whatsapp"></a>
                         <a href="#" target="_blank" class="fab fa-instagram"></a>
                     </div>
                 </div>
@@ -172,27 +190,31 @@ footer li {
                     <h4 class="titulo-sobre-footer">Serviços</h4>
                     <hr>
                     <div id="texto-p">
-                        <li>Limpeza de pele</li>
-                        <li>Luzes/masculino</li>
-                        <li>Cortes cabelo masculino</li>
-                        <li>Cortes cabelo feminino</li>
-                        <li>Progressiva masculino</li>
-                        <li>Progressiva feminino</li>
-                        <li>Relaxamento capilar masculino</li>
-                        <li>Barba</li>
-                        <li>Sombrancelha masculino</li>
+                        <ul>
+                            <li>Limpeza de pele</li>
+                            <li>Luzes/masculino</li>
+                            <li>Cortes cabelo masculino</li>
+                            <li>Cortes cabelo feminino</li>
+                            <li>Progressiva masculino</li>
+                            <li>Progressiva feminino</li>
+                            <li>Relaxamento capilar masculino</li>
+                            <li>Barba</li>
+                            <li>Sombrancelha masculino</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="links-rapidos">
                     <h4 class="titulo-sobre-footer">Links rápidos</h4>
                     <hr>
-                    <ul class="icon-porta">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="servicos.php">Serviços</a></li>
-                        <li><a href="produtos.php">Produtos</a></li>
-                        <li><a href="sobre.php">Sobre</a></li>
-                    </ul>
+                    <div class="links-li">
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="servicos.php">Serviços</a></li>
+                            <li><a href="produtos.php">Produtos</a></li>
+                            <li><a href="sobre.php">Sobre</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -201,10 +223,8 @@ footer li {
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-7J9dD7nE4aR8ae5TW5PH4mF2N5H9Rp/zF3Y3wU5xj5eIz+5mM9oKNhA70Z7PfFNOe" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

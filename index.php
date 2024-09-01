@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Salão Novo Estilo Itapira</title>
   <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
-  <link rel="stylesheet" href="style/index.css" type="text/css">
+  <link rel="stylesheet" href="style/styles.css" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -87,7 +86,7 @@
 
       <div id="botaoartista">
         <a href="sobre.php">
-          <button id="botaocssartista"><span>Saiba mais</span><img src="multimidia/icon/portaiconindex.png" alt="" id="imgportaindex"></button>
+          <button id="botaocssartista"><span>Saiba mais</span><img src="multimidia/icon/iconportabranca.png" alt="" id="imgportaindex"></button>
         </a>
       </div>
     </section>
@@ -95,21 +94,21 @@
     <section class="Servicoindex">
       <h1>Serviços</h1>
 
-      <div id="divblockmasculino">
+      <div id="divblockserv">
         <div id="textoservicomasculino">
           <h4 class="servicos">Cortes de Cabelo Masculino</h4>
           <p>Cortes clássicos e modernos para atender ao seu estilo e personalidade.</p>
         </div>
       </div>
 
-      <div id="divblockfeminino">
+      <div id="divblockserv">
         <div id="textoservicofeminino">
           <h4>Progressiva Feminino</h4>
           <p>Alisamento e tratamento para cabelos femininos.</p>
         </div>
       </div>
 
-      <div id="divblockfeminino">
+      <div id="divblockserv">
         <div id="textoservicofeminino">
           <h4>Limpeza de Pele</h4>
           <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
@@ -118,7 +117,7 @@
 
       <div id="botaoservicos">
         <a href="servicos.php">
-          <button id="botaocssservicos">Saiba mais <img src="multimidia/icon/portaiconindex.png" alt="" id="imgportaindex"></button>
+          <button id="botaocssservicos"><span>Saiba mais </span><img src="multimidia/icon/iconportabranca.png" alt="" id="imgportaindex"></button>
         </a>
       </div>
     </section>

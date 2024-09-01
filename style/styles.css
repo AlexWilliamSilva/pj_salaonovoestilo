@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+                                                    /* ESTILOS GERAIS    */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,3 +8,584 @@
 body {
     font-family: 'Inria Sans', sans-serif;
 }
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+                                                    /* INDEX_HOME MOBILE */
+
+#textocarrossel p{
+    z-index: 1;
+    font-size: 24px;
+    color: #fff;
+}
+
+.carousel-inner > #textocarrossel {
+    position: fixed;
+}
+
+#imgcarousel {
+    width: 100%;
+}
+
+.Artistaindex h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+#imgartistaindex {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#botaoartista, #botaoservicos {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#botaocssartista {
+    border: none;
+    background-color: #DF0000;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+#botaocssartista, #botaocssservicos span {
+    color: #fff;
+}
+
+#botaocssservicos {
+    border: none;
+    background-color: #0044D7;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+/* Serviços-Index */
+
+.Servicoindex {
+    background-color: #f6f6f6;
+}
+
+.Servicoindex h1 {
+    margin-top: 68px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* INDEX DESKTOP */
+
+@media (min-width: 620px) {
+    #textocarrossel p{
+        z-index: 1;
+        font-size: 64px;
+    }
+
+    #textocarrossel {
+        margin: 0 auto;
+        margin-top: -100px;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+                                                    /* SERVIÇOS MOBILE */
+
+#tituloservico h1 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.AreaMasculina, .AreaFeminina {
+    background-color: #f6f6f6;
+    padding: 0 10px;
+}
+
+.AreaMasculina {
+    padding-top: 40px;
+}
+
+.AreaFeminina {
+    width: auto;
+    height: 790px;
+    padding-top: 40px;
+}
+.AreaMasculina h2 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #00000090;
+}
+.AreaFeminina h2 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #00000090;
+}
+
+#divblockserv {
+    margin: 0 auto 29px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#textoservicomasculino h4 {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 20px;
+    color: #004197;
+}
+
+#textoservicofeminino h4 {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 20px;
+    color: #DF0000;
+}
+
+#textoservicomasculino p, #textoservicofeminino p {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* SERVIÇOS DESKTOP */
+
+@media (min-width: 619px) {
+    #tituloservico h1 {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 50px;
+     }
+
+     #tituloservico hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    #divblockserv {
+        margin: 0 auto 29px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+        padding: 20px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+    }
+
+    .AreaMasculina {
+        display: block;
+    }
+
+    .divblock-desloc1 {
+        margin-left: 150px;
+        display: block;
+        float: left;
+    }
+
+    .divblock-desloc2 {
+
+        display: block;
+        float: right
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+                                                    /* PRODUTOS MOBILE */
+
+#titleprod h1 {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Inria Sans', sans-serif;
+    text-align: center;
+    color: #000;
+}
+
+#col {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
+    width: 380px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
+}
+
+#imgprod img {
+    display: block;
+    border: solid #fff thin;
+    border-radius: 10px;
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}   
+
+#textoprodutos {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+   
+}
+
+#imgprod #textoprodutos {
+    display: block;
+}
+
+/* REMOVER O SCROLL HORIZONTAL */
+::-webkit-scrollbar {
+    display: none;
+}
+
+#titleprod hr {
+    border: #000 solid 1px;
+    width: 25%;
+    margin: auto;
+    margin-bottom: 73px;
+}
+
+/* PRODUTOS DESKTOP */
+
+@media (min-width: 620px) {
+
+    #titleprod h1 {
+        display: block;
+        margin: 0 auto;
+        font-family: 'Inria Sans', sans-serif;
+        text-align: center;
+        color: #000;
+    }
+
+    #col {
+        display: inline-flex;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.336);
+        padding: 20px;
+        width: 480px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    #textoprodutos {
+        font-size: 25px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 140px;
+    }
+
+    #imgprod img {
+        display: block;
+        border: solid #fff thin;
+        border-radius: 10px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+        max-width: 205px;
+        height: auto;
+    }
+
+    #imgprod #textoprodutos {
+        display: block;
+    }
+
+    /* REMOVER O SCROLL HORIZONTAL */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #titleprod hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 73px;
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+                                                    /* SOBRE MOBILE */
+
+/* titulo sobre nos */
+
+#titlesobrenos h1 {
+    font-family: 'Inria Sans', sans-serif;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+#titlesobrenos hr {
+    border: #000 solid 1px;
+    width: 25%;
+    margin: auto;
+    margin-bottom: 73px;
+}
+
+
+/* parte da localização */
+
+.localizacaodiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: 500px;
+    border-radius: 10px;
+    width: 380px; 
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+}
+
+#titulosalaosobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+#imgsalaosobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+    margin-top: 14px;
+}
+
+#localizacaosalao {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    margin-right: 21px;
+    display: flex;
+    float: right;
+    width: 205px; 
+    height: 115px;
+}
+
+.nomesalao h4, p {
+    margin-top: 37px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: -5px;
+}   
+
+#localizacaoendereco p {
+    position: relative;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* parte do artista */
+
+.artistadiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: auto;
+    border-radius: 10px;
+    width: 300px; 
+    margin: 10% auto;
+}
+
+.titleartistasobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 16px;
+}
+
+.titleartistasobre hr {
+    border: #000 solid 1px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 21px;
+}
+
+#img-artistasobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+}
+
+
+/* tabela da agenda*/
+
+#divagenda {
+    background-color: #fff;
+    box-shadow: 1px rgba(0, 0, 0, 0.336);
+    height: auto;
+    width: 380px; 
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#table #agenda {
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+#table tr {
+    font-size: 10px;
+
+    border: 1px solid #000;
+    font-family: 'Inria Serif', serif;
+}
+
+#table {
+    max-width: 100%;
+} 
+
+/* SOBRE DESKTOP */
+
+@media (min-width: 620px) {
+
+    /* titulo sobre nos */
+
+    #titlesobrenos h1 {
+        font-family: 'Inria Sans', sans-serif;
+        text-align: center;
+        color: #000;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        font-size: 48px;
+    }
+
+    #titlesobrenos hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 73px;
+    }
+
+    /* parte da localização */
+
+    .localizacaodiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 1100px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    #titulosalaosobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    #imgsalaosobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 720px;  
+        margin-top: 14px;
+        margin-bottom: 40px;
+    }
+    
+    #imgsalaosobre hr {
+        border: #000 solid 1px;
+        width: 1000px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #localizacaosalao {
+        margin-top: 16px;
+        margin-bottom: 40px;
+        margin-right: 21px;
+        display: flex;
+        float: right;
+        width: 750px; 
+        height: 300px;
+    }
+
+    .nomesalao h4, p {
+        margin-top: 160px;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: -5px;
+    }   
+
+    .nomesalao hr {
+        border: #000 solid 1px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    #localizacaoendereco p {
+        position: relative;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* parte do artista */
+
+    .artistadiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 600px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    .titleartistasobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    .titleartistasobre hr {
+        border: #000 solid 1px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 21px;
+    }
+
+    #img-artistasobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 360px;  
+    }
+
+    #botaoartistasobre {
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
