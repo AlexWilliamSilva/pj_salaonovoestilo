@@ -23,7 +23,7 @@
         <div class="carousel-item active">
           <picture>
             <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg" >
-            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="" id="imgcarousel">
           </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
             <p id="carouselblue">Seu cabelo, nosso talento.</p>
@@ -80,13 +80,13 @@
       <div id="imgartistaindex">
         <picture>
           <source media="(min-width: 620px)" srcset="multimidia/artista.jpg">
-          <img src="multimidia/mobile/artistamobile.jpg" alt="">
+          <img src="multimidia/mobile/artistamobile.jpg" alt="imagem do artista">
         </picture>
         </div>
 
       <div id="botaoartista">
         <a href="sobre.php">
-          <button id="botaocssartista"><span>Saiba mais</span><img src="multimidia/icon/iconportabranca.png" alt="" id="imgportaindex"></button>
+          <button id="botaocssartista"><span>Saiba mais</span><img src="multimidia/icon/iconportabranca.png" alt="icone de uma porta para o botao" id="imgportaindex"></button>
         </a>
       </div>
     </section>
@@ -117,7 +117,7 @@
 
       <div id="botaoservicos">
         <a href="servicos.php">
-          <button id="botaocssservicos"><span>Saiba mais </span><img src="multimidia/icon/iconportabranca.png" alt="" id="imgportaindex"></button>
+          <button id="botaocssservicos"><span>Saiba mais </span><img src="multimidia/icon/iconportabranca.png" alt="icone de uma porta para o botao" id="imgportaindex"></button>
         </a>
       </div>
     </section>

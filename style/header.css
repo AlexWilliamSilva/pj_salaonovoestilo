@@ -6,12 +6,14 @@
     padding: 10px;
 }
 
+/* logo */
 #header img {
     margin-top: 30px;
     max-width: 100%; /* Responsivo */
     height: auto; /* Responsivo */
 }
 
+/* nome do salao */
 #titleheader {
     display: flex;
     align-items: center;
@@ -21,7 +23,6 @@
 
 #nomesalao {  
     font-size: 24px;
-    text-align: center;
     font-family: 'Inria Serif', serif;
 }
 

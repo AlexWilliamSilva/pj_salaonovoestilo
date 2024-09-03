@@ -6,147 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <title>Footer</title>
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <style>
-        /* footer Mobile */
-
-/* tudo do footer */
-
-footer {
-    background-color: #6C6C6C40;
-    color: #000;
-    font-family: 'Inria Serif', serif;
-}
-
-footer li {
-    font-size: 12px;   
-}
-
-.titulo-sobre-footer {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
-}
-
-.containerfooter {
-    margin-left: 10%;
-    margin-right: 10%; 
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-logo img {
-    margin-top: 50px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icons a {
-    color: #000;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-.links-rapidos a {
-    color: #000;
-    text-align: center;
-    font-size: 18px;
-    text-decoration: none;    
-}
-
-.links-rapidos ul li {
-    list-style-type: none;
-    text-align: center;
-    margin-left: -35px;
-}
-
-#contatofooter {
-    padding-top: 50px;
-}
-
-#contatofooter li {   
-    display: flex;
-    justify-content: center;  
-}
-
-#localizacaofooter li {
-    list-style: none;
-}
-
-#texto-p ul li {
-    list-style-type: none;
-}
-
-#texto-p {
-    margin-left:5em;   
-}
-
-#texto-p li {
-    text-align: center;
-    margin-left: -110px;
-}
-
-/* direitos autorais */
-
-.copyright {
-    background-color: #696969;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-}
-
-@media (min-width: 780px) {
-    /* footer */
-
-    .footer-content {
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    .links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
-        padding-top: 40px;
-        padding-bottom: 50px;
-    }
-
-    .links-rapidos ul li {
-        list-type: none;
-        list-style-image: url('multimidia/icon/portaiconindex.png');
-        width: 34px;
-        height: 39px;
-    }
-
-    .links-li {
-        margin-left: 50px;
-    }
-
-    #texto-p {
-        text-align: center;
-        margin-left: 4em;    
-    }
-
-    .titulo-sobre-footer {
-        font-size: 20px;
-    }
-
-    /* fecha footer */
-}
-    </style>
+  
 </head>
 <body>
 
@@ -164,7 +29,7 @@ footer li {
                     
                     <div class="social-icons mt-3">
                         <a href="https://wa.me/19993678114" target="_blank" class="fab fa-whatsapp"></a>
-                        <a href="#" target="_blank" class="fab fa-instagram"></a>
+                        <a href="" target="_blank" class="fab fa-instagram"></a>
                     </div>
                 </div>
 
@@ -190,31 +55,27 @@ footer li {
                     <h4 class="titulo-sobre-footer">Serviços</h4>
                     <hr>
                     <div id="texto-p">
-                        <ul>
-                            <li>Limpeza de pele</li>
-                            <li>Luzes/masculino</li>
-                            <li>Cortes cabelo masculino</li>
-                            <li>Cortes cabelo feminino</li>
-                            <li>Progressiva masculino</li>
-                            <li>Progressiva feminino</li>
-                            <li>Relaxamento capilar masculino</li>
-                            <li>Barba</li>
-                            <li>Sombrancelha masculino</li>
-                        </ul>
+                        <li>Limpeza de pele</li>
+                        <li>Luzes/masculino</li>
+                        <li>Cortes cabelo masculino</li>
+                        <li>Cortes cabelo feminino</li>
+                        <li>Progressiva masculino</li>
+                        <li>Progressiva feminino</li>
+                        <li>Relaxamento capilar masculino</li>
+                        <li>Barba</li>
+                        <li>Sombrancelha masculino</li>
                     </div>
                 </div>
 
                 <div class="links-rapidos">
                     <h4 class="titulo-sobre-footer">Links rápidos</h4>
                     <hr>
-                    <div class="links-li">
-                        <ul>
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="servicos.php">Serviços</a></li>
-                            <li><a href="produtos.php">Produtos</a></li>
-                            <li><a href="sobre.php">Sobre</a></li>
-                        </ul>
-                    </div>
+                    <ul class="icon-porta">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="servicos.php">Serviços</a></li>
+                        <li><a href="produtos.php">Produtos</a></li>
+                        <li><a href="sobre.php">Sobre</a></li>
+                    </ul>
                 </div>
 
             </div>
@@ -223,8 +84,10 @@ footer li {
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-7J9dD7nE4aR8ae5TW5PH4mF2N5H9Rp/zF3Y3wU5xj5eIz+5mM9oKNhA70Z7PfFNOe" crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

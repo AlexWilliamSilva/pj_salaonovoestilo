@@ -32,7 +32,7 @@
                 <div id="imgsalaosobre">
                     <picture>
                         <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
-                        <img src="multimidia/mobile/Midiamobile.jpg" alt="">
+                        <img src="multimidia/mobile/Midiamobile.jpg" alt="imagem do local do salao">
                     </picture>
                     <hr>
                 </div>
@@ -65,7 +65,7 @@
                 <div id="img-artistasobre">
                     <picture>
                         <source media="(min-width: 620px)" srcset="multimidia/artista.jpg">
-                        <img src="multimidia/mobile/artistamobile.jpg" alt="">
+                        <img src="multimidia/mobile/artistamobile.jpg" alt="imagem do artista">
                     </picture>
                 </div>
                 

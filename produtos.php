@@ -27,8 +27,8 @@
                     <div class="col" id="col">
                         <div id="imgprod">
                             <picture>
-                                <source media="(min-width: 620px)" srcset="multimidia/perfume.webp">
-                                <img src="multimidia/mobile/perfumemobile.jpg" alt="" id="imgprod">
+                                <source media="(min-width: 620px)" srcset="multimidia/perfumeessencial.webp">
+                                <img src="multimidia/mobile/perfumeessencialmobile.jpg" alt="imagem do perfume essencial da natura" id="imgprod">
                             </picture>
                         </div>
                         <div id="textoprodutos">
@@ -42,7 +42,7 @@
                     <div id="imgprod">
                         <picture>
                             <source media="(min-width: 620px)" srcset="multimidia/kaiak.webp">
-                            <img src="multimidia/mobile/kaiakmobile.jpg" alt="" id="imgprod">
+                            <img src="multimidia/mobile/kaiakmobile.jpg" alt="imagem do perfume kaiak oceano da natura" id="imgprod">
                         </picture>
                     </div>
                     <div id="textoprodutos">
@@ -56,7 +56,7 @@
                     <div id="imgprod">
                         <picture>
                             <source media="(min-width: 620px)" srcset="multimidia/desodorante.webp">
-                            <img src="multimidia/mobile/desodorantemobile.jpg" alt="" id="imgprod">
+                            <img src="multimidia/mobile/desodorantemobile.jpg" alt="imagem do desodorante homem sagaz da natura" id="imgprod">
                         </picture>
                     </div>
                     <div id="textoprodutos">
@@ -70,7 +70,7 @@
                     <div id="imgprod">
                         <picture>
                             <source media="(min-width: 620px)" srcset="multimidia/pomada.webp">
-                            <img src="multimidia/mobile/pomadamobile.jpg" alt="" id="imgprod">
+                            <img src="multimidia/mobile/pomadamobile.jpg" alt="imagem da pomada para cabelo barber style" id="imgprod">
                         </picture>
                     </div>
                     <div id="textoprodutos">

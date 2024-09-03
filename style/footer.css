@@ -1,0 +1,158 @@
+
+/* tudo do footer */
+
+footer {
+    background-color: #6C6C6C40;
+    color: #000;
+    font-family: 'Inria Serif', serif;
+}
+
+footer li {
+    font-size: 12px;   
+}
+
+.titulo-sobre-footer {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content  hr{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/* logo footer */
+
+.footer-logo img {
+    margin-top: 50px;
+}
+
+/* icones do whatsapp e intagram */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Estilizacao espaçamentos dos elementos */
+
+.links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Estilizacao Contato */
+
+#contatofooter {
+    padding-top: 50px;
+}
+
+#contatofooter li {   
+    display: flex;
+    justify-content: center;  
+}
+
+/* Estilizacao Localizacao */
+
+#localizacaofooter li {
+    list-style: none;
+}
+
+/* Estilizacao Serviços */
+
+#servicosfooter {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: left; 
+}
+
+/* Estilizacao Links Rapidos */
+
+.links-rapidos a {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+ /* Estilizaçao do icone da porta */
+
+.icon-porta  {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;      
+}
+
+.icon-porta li  {
+    text-align: left;
+    position: relative;
+    padding-left: 40px; 
+}
+
+.icon-porta li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url('../multimidia/icon/portaiconindex.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin-right: 5px; 
+}
+ 
+/* direitos autorais */
+
+.copyright {
+    background-color: #696969;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 1320px) {
+    /* footer */
+
+    .containerfooter {
+        margin-left: 10%;
+        margin-right: 10%; 
+    }
+
+    .footer-content {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .links-rapidos, #contatofooter, #localizacaofooter, #servicosfooter {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .titulo-sobre-footer {
+        font-size: 1vw;
+    }
+
+    .footer-content  hr{
+        width: 200px;
+    }
+
+    #servicosfooter {
+        margin-top: 22px;
+    }
+
+}
+
+    /* fecha footer */

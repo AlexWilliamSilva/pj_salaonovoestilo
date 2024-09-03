@@ -1,0 +1,29 @@
+.col {
+    margin: 0 auto 29px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 620px) {
+    .col 
+    {
+        margin: 0 auto 29px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.336);
+        padding: 20px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+    }
+}
