@@ -22,45 +22,33 @@
 
         <div class="carousel-item active">
           <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg" >
-            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="" id="imgcarousel">
+            <source media="(min-width: 620px)" srcset="multimidia/img1carousel.jpg" >
+            <img src="multimidia/mobile/img1carouselmobile.jpg" class="d-block w-100" alt="" id="imgcarousel">
           </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselblue">Seu cabelo, nosso talento.</p>
+            <p id="carouselblue"></p>
           </div>
         </div>
 
         <div class="carousel-item">
           <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
-            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+            <source media="(min-width: 620px)" srcset="multimidia/img2carousel.jpg">
+            <img src="multimidia/mobile/img2carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselred">Aqui é Onde os sonhos capilares se tornam realidade.</p>
+            <p id="carouselred"></p>
           </div>
         </div>
 
         <div class="carousel-item">
           <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
-            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+            <source media="(min-width: 620px)" srcset="multimidia/img3carousel.jpg">
+            <img src="multimidia/mobile/img3carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
           </picture>
           <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselblue">Onde a arte do cabelo encontra a ciência da beleza.</p>
+            <p id="carouselblue"></p>
           </div>
         </div>
-
-        <div class="carousel-item">
-          <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/Midia.jpg">
-            <img src="multimidia/mobile/midiamobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
-          </picture>
-          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselred">Realçando sua beleza natural com cada toque.</p>
-          </div>
-        </div>
-
-      </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
