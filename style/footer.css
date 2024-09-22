@@ -8,7 +8,7 @@ footer {
 }
 
 footer li {
-    font-size: 12px;   
+    font-size: 15px;   
 }
 
 .titulo-sobre-footer {
@@ -125,6 +125,10 @@ footer li {
 
 @media (min-width: 1320px) {
     /* footer */
+
+    footer li {
+        font-size: 20px;   
+    }
 
     .containerfooter {
         margin-left: 10%;

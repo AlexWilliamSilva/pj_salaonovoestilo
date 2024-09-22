@@ -1,0 +1,273 @@
+/* titulo sobre nos */
+
+#titlesobrenos h1 {
+    font-family: 'Inria Sans', sans-serif;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+#titlesobrenos hr {
+    border: #000 solid 1px;
+    width: 25%;
+    margin: auto;
+    margin-bottom: 73px;
+}
+
+
+/* parte da localização */
+
+.localizacaodiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: 500px;
+    border-radius: 10px;
+    width: 380px; 
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+}
+
+#titulosalaosobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+#imgsalaosobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+    margin-top: 14px;
+}
+
+#localizacaosalao {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    margin-right: 21px;
+    display: flex;
+    float: right;
+    width: 205px; 
+    height: 115px;
+}
+
+.nomesalao h4, p {
+    margin-top: 37px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: -5px;
+}   
+
+#localizacaoendereco p {
+    position: relative;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* parte do artista */
+
+.artistadiv {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+    height: auto;
+    border-radius: 10px;
+    width: 300px; 
+    margin: 10% auto;
+}
+
+.titleartistasobre h2 {
+    font-family: 'Inria Serif', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 16px;
+}
+
+.titleartistasobre hr {
+    border: #000 solid 1px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 21px;
+}
+
+#img-artistasobre img {
+    display: block; 
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 100%;  
+}
+
+#saibamaissobre {
+    margin-left: 80px;
+}
+
+#saibamaissobre a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* tabela da agenda*/
+
+#divagenda {
+    background-color: #fff;
+    box-shadow: 1px rgba(0, 0, 0, 0.336);
+    height: auto;
+    width: 380px; 
+    margin-top: 50px;
+    margin-bottom: 64px;
+    margin: 10% auto;
+    text-align: center;
+}
+
+#table #agenda {
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+#table tr {
+    font-size: 10px;
+    border: 1px solid #000;
+    font-family: 'Inria Serif', serif;
+}
+
+#table {
+    max-width: 100%;
+} 
+
+/* SOBRE DESKTOP */
+
+@media (min-width: 620px) {
+
+    /* titulo sobre nos */
+
+    #titlesobrenos h1 {
+        font-family: 'Inria Sans', sans-serif;
+        text-align: center;
+        color: #000;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        font-size: 48px;
+    }
+
+    #titlesobrenos hr {
+        border: #000 solid 1px;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 73px;
+    }
+
+    /* parte da localização */
+
+    .localizacaodiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 1100px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    #titulosalaosobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    #imgsalaosobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 720px;  
+        margin-top: 14px;
+        margin-bottom: 40px;
+    }
+    
+    #imgsalaosobre hr {
+        border: #000 solid 1px;
+        width: 1000px;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #localizacaosalao {
+        margin-top: 16px;
+        margin-bottom: 40px;
+        margin-right: 21px;
+        display: flex;
+        float: right;
+        width: 750px; 
+        height: 300px;
+    }
+
+    .nomesalao h4, p {
+        margin-top: 160px;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: -5px;
+    }   
+
+    .nomesalao hr {
+        border: #000 solid 1px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    #localizacaoendereco p {
+        position: relative;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* parte do artista */
+
+    .artistadiv {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.336);
+        height: 600px;
+        border-radius: 10px;
+        width: 100%; 
+        margin: 10% auto;
+    }
+
+    .titleartistasobre h2 {
+        font-family: 'Inria Serif', serif;
+        text-align: center;
+        font-size: 48px;
+        margin-top: 16px;
+    }
+
+    .titleartistasobre hr {
+        border: #000 solid 1px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 21px;
+    }
+
+    #img-artistasobre img {
+        display: block; 
+        border-radius: 10px;
+        margin: 0 auto; 
+        max-width: 360px;  
+    }
+
+    #saibamaissobre {
+        margin-left: 850px;
+    }
+
+    #saibamaissobre a {
+        font-size: 48px;
+        text-decoration: none;
+        color: #000;
+    }
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */

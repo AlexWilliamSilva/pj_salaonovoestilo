@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css" type="text/css">
+    <link rel="stylesheet" href="style/sobre.css" type="text/css">
     <title>Sobre - Salão Novo Estilo Itapira</title>
     <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -69,11 +69,9 @@
                     </picture>
                 </div>
                 
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                    <div id="botaoartistasobre">
-                        <p>Saiba Mais</p>
-                    </div>
-                </button>
+                <div id="saibamaissobre">
+                    <a href="" >Saiba mais</a>
+                </div>
                 
             </div>    
 
