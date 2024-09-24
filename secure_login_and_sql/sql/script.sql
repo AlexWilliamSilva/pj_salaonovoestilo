@@ -1,6 +1,7 @@
+-- SQLBook: Code
 CREATE DATABASE dbSalaoNovoEstilo;
 
-CREATE TABLE Clientes (
+CREATE TABLE dbSalaoNovoEstilo.Clientes (
     id_cli INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_cli VARCHAR(50) NOT NULL,
     tel_cli VARCHAR(20) NOT NULL,
@@ -11,25 +12,24 @@ CREATE TABLE Clientes (
     cep VARCHAR(9) -- valor que suporta o hífen, Ex: XXXX-XXX
 );
 
-CREATE TABLE Servicos (
+CREATE TABLE dbSalaoNovoEstilo.Servicos (
     id_serv INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_serv VARCHAR(50) NOT NULL,
     descricao_serv VARCHAR(255),
     preco_serv DECIMAL(10, 2) NOT NULL
 );
 
-CREATE TABLE Ordem_De_Servico (
+/*CREATE TABLE Ordem_De_Servico (
     id_serv_ped INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cli INT(12) NOT NULL,
     id_serv INT(12) NOT NULL,
     valor_serv DECIMAL(10, 2) NOT NULL,
     data_serv_ped DATE,
-
-    CONSTRAINT fk_cliente FOREIGN KEY (id_cli) REFERENCES Clientes(id_cli), /* Constraint -- nomeando as cchaves estrangeiras para futuras alterações */
+    CONSTRAINT fk_cliente FOREIGN KEY (id_cli) REFERENCES Clientes(id_cli), /* Constraint -- nomeando as cchaves estrangeiras para futuras alterações 
     CONSTRAINT fk_servico FOREIGN KEY (id_serv) REFERENCES Servicos(id_serv)
-);
+);*/
 
-CREATE TABLE Produtos (
+CREATE TABLE dbSalaoNovoEstilo.Produtos (
     id_prod INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_prod VARCHAR(50) NOT NULL,
     descricao_prod VARCHAR(255),
@@ -40,19 +40,18 @@ CREATE TABLE Produtos (
     status_prod VARCHAR(10) NOT NULL
 );  
 
-CREATE TABLE Ped_Prod (
+/*CREATE TABLE Ped_Prod (
     id_ped_prod INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cli INT(12) NOT NULL,
     id_prod INT(12) NOT NULL,
     quant_prod_ped INT NOT NULL, 
     data_ped_prod DATE,
     valor_prod DECIMAL(10, 2) NOT NULL,
-
     CONSTRAINT fk_cliente FOREIGN KEY (id_cli) REFERENCES Clientes(id_cli), 
     CONSTRAINT fk_produto FOREIGN KEY (id_prod) REFERENCES Produtos(id_prod)
-);
+);*/
 
-CREATE TABLE Fornecedores (
+CREATE TABLE dbSalaoNovoEstilo.Fornecedores (
     id_fornecedor INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_fornecedor VARCHAR(50) NOT NULL,
     razao_social VARCHAR(255) NOT NULL,
@@ -68,17 +67,16 @@ CREATE TABLE Fornecedores (
     status_fornecedor VARCHAR(10) NOT NULL
 );
 
-CREATE TABLE Itens_Fornecidos (
+/*CREATE TABLE Itens_Fornecidos (
     id_prod_fornecido INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_fornecedor INT(12) NOT NULL,
     id_prod INT(12) NOT NULL,
     quant_prod_fornecido INT NOT NULL, 
     valor_prod_fornecido DECIMAL(10, 2) NOT NULL,
     data_prod_fornecido DATE, 
-
     CONSTRAINT fk_fornecedor FOREIGN KEY (id_fornecedor) REFERENCES Fornecedores(id_fornecedor),
     CONSTRAINT fk_produto FOREIGN KEY (id_prod) REFERENCES Produtos(id_prod)
-);
+);*/
 
                                                         -- Outra opção 
 /*
@@ -103,10 +101,16 @@ CREATE TABLE Itens_Fornecidos (
 
 */
 
-CREATE TABLE Usuarios (
+CREATE TABLE dbSalaoNovoEstilo.Usuarios (
     id_user INT(12) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome_user VARCHAR(50) NOT NULL,
     email_user VARCHAR(100) NOT NULL UNIQUE, 
     senha_user VARCHAR(150) NOT NULL,
     cpf_user VARCHAR(14) NOT NULL UNIQUE
 );
+
+select * from dbSalaoNovoEstilo.Clientes;
+
+select * from dbSalaoNovoEstilo.Produtos;
+
+select * from dbSalaoNovoEstilo.Fornecedores;
