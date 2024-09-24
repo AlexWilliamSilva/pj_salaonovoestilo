@@ -108,7 +108,6 @@ require_once "nav.php";
                 <input type="hidden" name="id_prod" value="<?= htmlspecialchars($id_prod) ?>">
                 <button type="submit" style="cursor: pointer;"><?= ($id_prod == -1) ? "Cadastrar" : "Salvar" ?></button>
                 <br><br>
-                <p>Se deseja fazer seu pedido clique <a class="aqui" href="pedido.php">aqui</a></p>
 
             </fieldset>
         </div>
