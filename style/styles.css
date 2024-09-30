@@ -208,7 +208,7 @@ body {
 
 /* SERVIÇOS DESKTOP */
 
-@media (min-width: 1268px) {
+@media (min-width: 1368px) {
     #tituloservico h1 {
         margin-top: 25px;
         text-align: center;
@@ -311,7 +311,7 @@ body {
 
 /* PRODUTOS DESKTOP */
 
-@media (min-width: 620px) {
+@media (min-width: 1368px) {
 
     #titleprod h1 {
         display: block;

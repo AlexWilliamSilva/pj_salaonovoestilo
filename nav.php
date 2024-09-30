@@ -59,7 +59,7 @@
             transform: scale(0.85);
         }
         
-        @media (min-width: 768px) {
+        @media (min-width: 1368px) {
             .navbar-nav {
                 flex: 1;
                 margin-left: auto;
