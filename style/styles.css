@@ -13,83 +13,126 @@ body {
 
                                                     /* INDEX_HOME MOBILE */
 
-#textocarrossel p{
-    z-index: 1;
-    font-size: 24px;
-    color: #fff;
-}
-
-.carousel-inner > #textocarrossel {
-    position: fixed;
-}
-
-#imgcarousel {
-    width: 100%;
-}
-
-.Artistaindex h1 {
-    text-align: center;
-    font-size: 35px;
-}
-
-#imgartistaindex {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-#botaoartista, #botaoservicos {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-#botaocssartista {
-    border: none;
-    background-color: #DF0000;
-    border-radius: 10px;
-    padding: 10px 30px;
-    text-align: center;
-}
-
-#botaocssartista, #botaocssservicos span {
-    color: #fff;
-}
-
-#botaocssservicos {
-    border: none;
-    background-color: #0044D7;
-    border-radius: 10px;
-    padding: 10px 30px;
-    text-align: center;
-}
-
-/* Serviços-Index */
-
-.Servicoindex {
-    background-color: #f6f6f6;
-}
-
-.Servicoindex h1 {
-    margin-top: 68px;
-    text-align: center;
-    font-size: 35px;
-}
-
-/* INDEX DESKTOP */
-
-@media (min-width: 620px) {
-    #textocarrossel p{
-        z-index: 1;
-        font-size: 64px;
+      /* estilizacao sobre o artista */
+      .Artistaindex h1 {
+        text-align: center;
+        font-size: 6vh;
+        padding: 60px;
+      }
+  
+      .Carrossel {
+        margin: 7px;
+      }
+  
+      /* imagem do artista */
+      #imgartistaindex {
+        display: flex;
+        justify-content: center;
+      }
+  
+      /* Botao sobre e serviços */
+      #botaoartista, #botaoservicos {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        padding-bottom: 100px;
+      }
+  
+      #botaocssartista, #botaocssservicos {
+        border: none;
+        border-radius: 10px;
+        padding: 15px 40px;
+        text-align: center;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+  
+      #botaocssartista {
+        background-color: #DF0000;
+      }
+  
+      #botaocssservicos {
+        background-color: #0044D7;
+      }
+  
+      /* Animação ao passar o mouse */
+      #botaocssartista:hover, #botaocssservicos:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.4);
+      }
+      /* fecha Botao sobre e serviços */
+       
+      /* Serviços-Index */
+      .Servicoindex {
+        background-color: #e8e8e8;
+        padding-top: 50px;
+        margin-top: 10px;
+      }
+  
+      .Servicoindex h1 {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 40px;
+      }
+  
+      /* Serviços em linha */
+      .servicos-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+  
+      .servico-item, .servico-item_feme {
+        flex: 1;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+  
+      .servico-item_feme h4 {
+        color:  #DF0000;
+        font-size: 1.5rem;
+      }
+  
+      .servico-item h4 {
+        font-size: 1.5rem;
+        color:  #0044D7;
+        margin-bottom: 10px;
+      }
+  
+      .servico-item p {
+        font-size: 1.7vh;
+      }
+  
+      .servico-item_feme p {
+        font-size: 1.7vh;
+      }
+      /* fecha Serviços-Index */
+  
+      @media (max-width: 1368px) {
+        .servicos-container {
+          flex-direction: column;
+        }
+  
+      .servico-item p {
+        font-size: 2vh;
+      }
+  
+       .servico-item_feme p {
+        font-size: 2vh;
+      }
+  
+      .servico-item, .servico-item_feme {
+        width: 460px;   
+      }
     }
-
-    #textocarrossel {
-        margin: 0 auto;
-        margin-top: -100px;
-    }
-}
 
 /* ------------------------------------------------------------------------------------------------------------------ */
 
@@ -165,7 +208,7 @@ body {
 
 /* SERVIÇOS DESKTOP */
 
-@media (min-width: 619px) {
+@media (min-width: 1268px) {
     #tituloservico h1 {
         margin-top: 25px;
         text-align: center;

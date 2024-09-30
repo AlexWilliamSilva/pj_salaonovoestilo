@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home - Salão Novo Estilo Itapira</title>
+
+  <link rel="stylesheet" href="style/style.css">
+
   <link rel="shortcut icon" href="multimidia/icon/faviconsalao.jpg " type="image/x-icon">
   <link rel="stylesheet" href="style/styles.css" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,56 +18,51 @@
       require_once "header.php";
       require_once "nav.php";
   ?>
-  
-  <main class="p-3 mb-2 bg-body-tertiary">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/img1carousel.jpg" >
-            <img src="multimidia/mobile/img1carouselmobile.jpg" class="d-block w-100" alt="" id="imgcarousel">
-          </picture>
-          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselblue"></p>
-          </div>
-        </div>
+  <main  class="bg-body-tertiary"> 
+      <div class="Carrossel">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner">
 
-        <div class="carousel-item">
-          <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/img2carousel.jpg">
-            <img src="multimidia/mobile/img2carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
-          </picture>
-          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselred"></p>
-          </div>
-        </div>
+                <div class="carousel-item active">
+                  <picture>
+                    <source media="(min-width: 620px)" srcset="multimidia/img1carousel.jpg">
+                    <img src="multimidia/mobile/img1carouselmobile.jpg" class="d-block w-100" alt="" id="imgcarousel">
+                  </picture>
+                </div>
 
-        <div class="carousel-item">
-          <picture>
-            <source media="(min-width: 620px)" srcset="multimidia/img3carousel.jpg">
-            <img src="multimidia/mobile/img3carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
-          </picture>
-          <div class="carousel-caption d-none d-md-block" id="textocarrossel">
-            <p id="carouselblue"></p>
-          </div>
-        </div>
+                <div class="carousel-item">
+                  <picture>
+                    <source media="(min-width: 620px)" srcset="multimidia/img2carousel.jpg">
+                    <img src="multimidia/mobile/img2carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+                  </picture>
+                </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
+                <div class="carousel-item">
+                  <picture>
+                    <source media="(min-width: 620px)" srcset="multimidia/img3carousel.jpg">
+                    <img src="multimidia/mobile/img3carouselmobile.jpg" class="d-block w-100" alt="..." id="imgcarousel">
+                  </picture>
+                </div>
 
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+              </div>
+            </div>   
 
-    </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+
+      </div>   
 
     <section class="Artistaindex">
       <h1>Artista</h1>
-        
+
       <div id="imgartistaindex">
         <picture>
           <source media="(min-width: 620px)" srcset="multimidia/artista.jpg">
@@ -78,26 +76,22 @@
         </a>
       </div>
     </section>
-    
+
     <section class="Servicoindex">
       <h1>Serviços</h1>
 
-      <div id="divblockserv">
-        <div id="textoservicomasculino">
+      <div class="servicos-container">
+        <div class="servico-item">
           <h4 class="servicos">Cortes de Cabelo Masculino</h4>
           <p>Cortes clássicos e modernos para atender ao seu estilo e personalidade.</p>
         </div>
-      </div>
 
-      <div id="divblockserv">
-        <div id="textoservicofeminino">
+        <div class="servico-item_feme">
           <h4>Progressiva Feminino</h4>
           <p>Alisamento e tratamento para cabelos femininos.</p>
         </div>
-      </div>
 
-      <div id="divblockserv">
-        <div id="textoservicofeminino">
+        <div class="servico-item">
           <h4>Limpeza de Pele</h4>
           <p>Tratamentos faciais para limpeza profunda e revitalização da pele.</p>
         </div>
@@ -111,6 +105,7 @@
     </section>
 
   </main>
+  
   <?php
         require_once "footer.php";
   ?>
