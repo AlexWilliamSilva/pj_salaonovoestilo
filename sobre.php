@@ -125,9 +125,7 @@
                     <!-- Texto à direita -->
                     <div class="modal-text">
                         <h5>José Euclides Gomes da Silva</h5>
-                        <p>Tempo de profissão: ??</p>
-                        <p>Dono e único profissional do seu próprio salão. Trabalhando sozinho, ele se dedica a cada cliente, oferecendo um atendimento exclusivo e personalizado.</p>
-                        <p>Com foco total na satisfação e bem-estar de quem o procura, José cuida pessoalmente de cada corte, coloração e tratamento, garantindo um serviço de alta qualidade.</p>
+                        <p>Olá, meu nome é José e eu sou dono do Salão Novo Estilo. Tenho mais de 15 anos de profissão nesta área, onde me dedico a oferecer os melhores serviços de beleza e bem-estar aos meus clientes. Minha paixão por transformar a aparência e a autoestima das pessoas me motiva a sempre buscar inovação e excelência em cada atendimento.</p>
                         <p>Venha conhecer um atendimento onde você é sempre o centro das atenções!</p>
                         <!-- Link do Instagram -->
                         <a href="https://www.instagram.com/eu_salaonovoestilo" target="_blank" id="linkinstagram">
