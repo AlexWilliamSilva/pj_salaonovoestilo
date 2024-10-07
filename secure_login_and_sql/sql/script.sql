@@ -146,3 +146,5 @@ CREATE TABLE dbNovoEstilo.items_pedido (
     -- FOREIGN KEY (id_ped) REFERENCES pedidos(id_ped),
     -- FOREIGN KEY (id_prod) REFERENCES Produto(id_prod)
 );
+
+select * from Produto;

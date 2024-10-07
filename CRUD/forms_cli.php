@@ -1,5 +1,5 @@
 <?php
-    require_once "dbconnect.php";
+    require_once "../includes/dbconnect.php";
     require_once "nav.php";
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-    require_once "dbconnect.php";
+    require_once "../includes/dbconnect.php";
 
     if (isset($_POST['addnew'])) {
         // Verificação de campos obrigatórios
