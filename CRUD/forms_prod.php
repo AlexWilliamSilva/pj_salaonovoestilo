@@ -1,5 +1,5 @@
 <?php
-    require_once "../includes/dbconnect.php";
+    include_once "../includes/dbconnect.php";
     $erro = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,7 +8,8 @@
             // Validando campos obrigatórios
             if (empty($_POST["nome_prod"]) || empty($_POST["quant_prod"]) || empty($_POST["preco_prod"]) || empty($_POST["marca"]) || empty($_POST["status_prod"])) {
                 $erro = "Todos os campos são obrigatórios.";
-            } else {
+            } 
+            else {
                 $id_prod = isset($_POST["id_prod"]) ? $_POST["id_prod"] : -1;
                 $nome_prod = $_POST["nome_prod"];
                 $descricao_prod = $_POST["descricao_prod"];
