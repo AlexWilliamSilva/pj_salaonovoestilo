@@ -5,7 +5,7 @@
    $dbname = "u335479363_alunos4";
 
    $con = mysqli_connect($localhost, $username, $password, $dbname); 
-   if ($con->connect_error) 
+   if (!$con) 
    {
       die ("Falha na Conexão: " .$con->connect_error); 
    }  

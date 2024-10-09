@@ -109,7 +109,7 @@
         <a class="nav-link" href="forms_prod.php"><i class="fas fa-box"></i> Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-cut"></i> Serviços</a> <!-- Ícone de barbearia -->
+        <a class="nav-link" href="forms_serv.php"><i class="fas fa-cut"></i> Serviços</a> <!-- Ícone de barbearia -->
       </li>
       <li class="nav-item">
         <a class="nav-link" href="forms_forne.php"><i class="fas fa-truck"></i> Fornecedores</a>
