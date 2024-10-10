@@ -1,36 +1,41 @@
 <?php
     include_once "../includes/dbconnect.php";
-    require_once "nav.php";
-    $erro = "";
 
-    // Processar POST para adicionar/editar produtos
+    $erro = '';
+    $success = '';
+
+    // Inserir/Atualizar Produto
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (isset($_POST["nome_prod"], $_POST["estoque_minimo"], $_POST["preco_prod"], $_POST["marca"], $_POST["status_prod"])) {
-            // Validando campos obrigatórios
-            if (empty($_POST["nome_prod"]) || empty($_POST["estoque_minimo"]) || empty($_POST["preco_prod"]) || empty($_POST["marca"]) || empty($_POST["status_prod"])) {
+        if (isset($_POST["nome_prod"], $_POST["preco_venda_prod"], $_POST["estoque_minimo_prod"], $_POST["status_prod"])) {
+            if (empty($_POST["nome_prod"]) || empty($_POST["preco_venda_prod"]) || empty($_POST["estoque_minimo_prod"]) || empty($_POST["status_prod"])) {
                 $erro = "Todos os campos são obrigatórios.";
             } else {
-                $id_prod = isset($_POST["id_prod"]) ? (int) $_POST["id_prod"] : -1;
+                $id_prod = isset($_POST["id_prod"]) ? $_POST["id_prod"] : -1;
                 $nome_prod = $_POST["nome_prod"];
-                $descricao_prod = $_POST["descricao_prod"];
-                $estoque_minimo = $_POST["estoque_minimo"];
-                $preco_prod = $_POST["preco_prod"];
                 $marca = $_POST["marca"];
+                $desc_prod = $_POST["desc_prod"];
+                $preco_venda_prod = $_POST["preco_venda_prod"];
+                $estoque_minimo_prod = $_POST["estoque_minimo_prod"];
                 $status_prod = $_POST["status_prod"];
 
-                // Inserindo novo produto no banco de dados
-                if ($id_prod == -1) {
-                    $stmt = $con->prepare("INSERT INTO `Produto` (`nome_prod`, `desc_prod`, `marca`, `preco_venda`, `estoque_minimo`, `status_prod`) VALUES (?, ?, ?, ?, ?, ?)");
-                    $stmt->bind_param("sssdis", $nome_prod, $descricao_prod, $marca, $preco_prod, $estoque_minimo, $status_prod);
+                if ($id_prod == -1) { // Inserir novo produto
+                    $stmt = $con->prepare("INSERT INTO Produto (nome_prod, marca, desc_prod, preco_venda, estoque_minimo, status_prod) VALUES (?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("sssdis", $nome_prod, $marca, $desc_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod);
 
                     if ($stmt->execute()) {
-                        header("Location: produto.php");
-                        exit;
+                        $success = "Produto cadastrado com sucesso.";
                     } else {
                         $erro = "Erro ao cadastrar produto: " . $stmt->error;
                     }
-                } else {
-                    $erro = "Operação não suportada.";
+                } else { // Atualizar produto existente
+                    $stmt = $con->prepare("UPDATE Produto SET nome_prod = ?, marca = ?, desc_prod = ?, preco_venda = ?, estoque_minimo = ?, status_prod = ? WHERE id_prod = ?");
+                    $stmt->bind_param("sssdisi", $nome_prod, $marca, $desc_prod, $preco_venda_prod, $estoque_minimo_prod, $status_prod, $id_prod);
+
+                    if ($stmt->execute()) {
+                        $success = "Produto atualizado com sucesso.";
+                    } else {
+                        $erro = "Erro ao atualizar produto: " . $stmt->error;
+                    }
                 }
             }
         } else {
@@ -38,46 +43,24 @@
         }
     }
 
-    // Alternar o status do produto
-    if (isset($_GET['id_prod'], $_GET['toggle_status'])) {
-        $id_prod = (int) $_GET['id_prod'];
-
-        // Verificar o status atual do produto
-        $stmt = $con->prepare("SELECT status_prod FROM Produto WHERE id_prod = ?");
-        $stmt->bind_param("i", $id_prod);
-        $stmt->execute();
-        $stmt->bind_result($status_prod);
-        $stmt->fetch();
-        $stmt->close();
-
-        // Alternar o status
-        $novo_status = ($status_prod == 'Ativo') ? 'Inativo' : 'Ativo';
-
-        // Atualizar o status no banco de dados
-        $stmt = $con->prepare("UPDATE Produto SET status_prod = ? WHERE id_prod = ?");
-        $stmt->bind_param("si", $novo_status, $id_prod);
-
+    // Desabilitar Produto
+    if (isset($_GET["id_prod"]) && is_numeric($_GET["id_prod"]) && isset($_GET["del"])) {
+        $id_prod = (int) $_GET["id_prod"];
+        $stmt = $mysqli->prepare("UPDATE Produto SET status_prod = 'Desabilitado' WHERE id_prod = ?"); // Supondo que 'Desabilitado' é um dos status
+        $stmt->bind_param('i', $id_prod);
         if ($stmt->execute()) {
-            header("Location: forms_prod.php"); // Certifique-se de que "produto.php" é o caminho correto
-            exit;
+            $success = "Produto desabilitado com sucesso.";
         } else {
-            $erro = "Erro ao atualizar o status: " . $stmt->error;
+            $erro = "Erro ao desabilitar produto: " . $stmt->error;
         }
     }
 
-    // Preenchendo os valores para edição
-    $id_prod = isset($_POST["id_prod"]) ? (int) $_POST["id_prod"] : -1;
-    $nome_prod = isset($_POST["nome_prod"]) ? $_POST["nome_prod"] : "";
-    $descricao_prod = isset($_POST["descricao_prod"]) ? $_POST["descricao_prod"] : "";
-    $estoque_minimo = isset($_POST["estoque_minimo"]) ? $_POST["estoque_minimo"] : "";
-    $marca = isset($_POST["marca"]) ? $_POST["marca"] : "";
-    $preco_prod = isset($_POST["preco_prod"]) ? $_POST["preco_prod"] : "";
-    $status_prod = isset($_POST["status_prod"]) ? $_POST["status_prod"] : "";
+    // Listar Produtos
+    $result = $con->query("SELECT * FROM Produto WHERE status_prod != 'Desabilitado'"); // Apenas produtos ativos
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,72 +92,73 @@
         }
     </style>
 </head>
+<?php
+    include_once "nav.php";
+?>
 <body>
+    <h1>Cadastro de Produtos</h1>
+
     <?php if (!empty($erro)): ?>
         <p style="color: red;"><?= htmlspecialchars($erro) ?></p>
     <?php endif; ?>
 
+    <?php if (!empty($success)): ?>
+        <p style="color: green;"><?= htmlspecialchars($success) ?></p>
+    <?php endif; ?>
+
+    <!-- Formulário para adicionar ou editar produto -->
     <form action="forms_prod.php" method="POST">
-        <div class="container">
-            <fieldset id="fieldsetcad">
+        <input type="hidden" name="id_prod" value="<?= isset($_POST['id_prod']) ? $_POST['id_prod'] : -1 ?>">
 
-                <legend>
-                    <h1>Novo Produto</h1>
-                </legend>
-                <label for="nome_prod">Nome do produto:</label><br>
-                <input type="text" name="nome_prod" value="<?= htmlspecialchars($nome_prod) ?>" required><br><br>
+        <label for="nome_prod">Nome do Produto:</label><br>
+        <input type="text" name="nome_prod"
+            value="<?= isset($_POST['nome_prod']) ? htmlspecialchars($_POST['nome_prod']) : '' ?>" required><br><br>
 
-                <label for="descricao_prod">Descrição:</label><br>
-                <input type="text" name="descricao_prod" value="<?= htmlspecialchars($descricao_prod) ?>" required><br><br>
+        <label for="marca">Marca:</label><br>
+        <input type="text" name="marca"
+            value="<?= isset($_POST['marca']) ? htmlspecialchars($_POST['marca']) : '' ?>"><br><br>
 
-                <label for="estoque_minimo">Quantidade em Estoque:</label><br>
-                <input type="number" name="estoque_minimo" value="<?= htmlspecialchars($estoque_minimo) ?>" required><br><br>
+        <label for="desc_prod">Descrição:</label><br>
+        <input type="text" name="desc_prod"
+            value="<?= isset($_POST['desc_prod']) ? htmlspecialchars($_POST['desc_prod']) : '' ?>"><br><br>
 
-                <label for="marca">Marca:</label><br>
-                <input type="text" name="marca" value="<?= htmlspecialchars($marca) ?>" required><br><br>
+        <label for="preco_venda_prod">Preço de Venda:</label><br>
+        <input type="number" step="0.01" name="preco_venda_prod"
+            value="<?= isset($_POST['preco_venda_prod']) ? htmlspecialchars($_POST['preco_venda_prod']) : '' ?>"
+            required><br><br>
 
-                <label for="preco_prod">Preço de Venda:</label><br>
-                <input type="number" name="preco_prod" value="<?= htmlspecialchars($preco_prod) ?>" required><br><br>
+        <label for="estoque_minimo_prod">Estoque Mínimo:</label><br>
+        <input type="number" name="estoque_minimo_prod"
+            value="<?= isset($_POST['estoque_minimo_prod']) ? htmlspecialchars($_POST['estoque_minimo_prod']) : '' ?>"
+            required><br><br>
 
-                <label for="status_prod">Status:</label><br>
-                <input type="radio" name="status_prod" id="status_ativo" value="Ativo" required <?= ($status_prod == 'Ativo') ? 'checked' : '' ?>>
-                <label for="status_ativo">Ativo</label>
-                <input type="radio" name="status_prod" id="status_inativo" value="Inativo" required <?= ($status_prod == 'Inativo') ? 'checked' : '' ?>>
-                <label for="status_inativo">Inativo</label>
-                <br><br>
+        <label for="status_prod">Status:</label><br>
+        <input type="text" name="status_prod"
+            value="<?= isset($_POST['status_prod']) ? htmlspecialchars($_POST['status_prod']) : '' ?>" required><br><br>
 
-                <input type="hidden" name="id_prod" value="<?= htmlspecialchars($id_prod) ?>">
-                <button type="submit" style="cursor: pointer;"><?= ($id_prod == -1) ? "Cadastrar" : "Salvar" ?></button>
-                <br><br>
-
-            </fieldset>
-        </div>
+        <button
+            type="submit"><?= (isset($_POST['id_prod']) && $_POST['id_prod'] != -1) ? 'Salvar' : 'Cadastrar' ?></button>
     </form>
 
     <hr>
 
-    <!-- Mostrando os produtos -->
+    <!-- Exibição dos produtos -->
     <h2>Lista de Produtos</h2>
     <table border="1">
-        <thead>  
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Marca</th>
                 <th>Descrição</th>
                 <th>Preço de Venda</th>
-                <th>Quantidade em Estoque</th>
+                <th>Estoque Mínimo</th>
                 <th>Status</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <?php 
-                // Pegando os dados do banco de dados
-                $result = $con->query("SELECT id_prod, nome_prod, marca, desc_prod, preco_venda, estoque_minimo, status_prod FROM Produto");
-
-                while ($produto = $result->fetch_assoc()): 
-            ?>
+            <?php while ($produto = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?= htmlspecialchars($produto['id_prod']) ?></td>
                     <td><?= htmlspecialchars($produto['nome_prod']) ?></td>
@@ -184,13 +168,13 @@
                     <td><?= htmlspecialchars($produto['estoque_minimo']) ?></td>
                     <td><?= htmlspecialchars($produto['status_prod']) ?></td>
                     <td>
-                        <a href="forms_prod.php?id_prod=<?= $produto['id_prod'] ?>&toggle_status=1">
-                            <?= ($produto['status_prod'] == 'Ativo') ? 'Desabilitar' : 'Habilitar' ?>
-                        </a>
+                        <a href="forms_prod.php?id_prod=<?= $produto['id_prod'] ?>&del=1"
+                            onclick="return confirm('Tem certeza que deseja desabilitar este produto?')">Desabilitar</a>
                     </td>
                 </tr>
-            <?php endwhile;?>
+            <?php endwhile; ?>
         </tbody>
     </table>
 </body>
+
 </html>

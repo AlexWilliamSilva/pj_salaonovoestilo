@@ -29,25 +29,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
-                $user = $result->fetch_assoc();
-                
-                // Verificar se a senha inserida corresponde ao hash armazenado
-                if (password_verify($password, $user['senha'])) {
-                    // Iniciar sessão e armazenar informações do usuário
-                    $_SESSION['logado'] = true;
-                    $_SESSION['nome'] = $user['nome_usu'];
-                    $_SESSION['id'] = $user['id_usu'];
+                // Busca os dados do usuário
+                $user = $result->fetch_assoc(); // Armazena os dados do usuário
+                $_SESSION['logado'] = true; // Marcar como logado
+                $_SESSION['nome'] = $user['nome_usu']; // nome do usuário na sessão
+                $id = $user['id_usu']; // ID do usuário na sessão
+                $_SESSION['id'] = $id;
 
-                    // Redirecionar para a página principal
-                    header("Location: ../index.php");
-                    exit;
-                } else {
-                    $error = "E-mail ou senha incorretos.";
-                }
+                // Redireciona após o login
+                echo '<script>window.location.href = "../CRUD/index.php";</script>';
+                exit;
             } else {
                 $error = "E-mail ou senha incorretos.";
             }
-
             $stmt->close();  // Fechar a declaração preparada
         } else {
             $error = "Erro ao preparar a consulta: " . $con->error;
@@ -61,42 +55,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- Inclua seu CSS aqui -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Ícones Font Awesome -->
+    <title>Login - Salão Novo Estilo</title>
+    <link rel="stylesheet" href="styles/stylelogin.css"> <!-- Link para o arquivo de CSS -->
+    <style>
+      
+    </style>
 </head>
 <body>
-    <main>
-        <form action="<?= $_SERVER["PHP_SELF"] ?>" method="post" id="form_login">
-            <div class="title_user">
-                <img src="../multimidia/images/usuario.png" alt="Logo de usuário">
-                <h2>LOGIN</h2>
-            </div>
-
+    <div class="login-container">
+        <div class="left-panel">
+            <img src="..//multimidia/logologin.png" alt="">
+            <h1>Salão Novo Estilo</h1>          
+        </div>
+        <div class="divider"></div> <!-- Barra vertical -->
+        <div class="right-panel">
+            <h2>Login</h2>
+            
             <?php if (isset($error)): ?>
                 <p style="color: red;"><?= $error; ?></p>
             <?php endif; ?>
+            
+            <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST" id="form_login">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-            <div class="inputs">
-                <label for="email">E-mail</label><br>
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
 
-                <label for="password">Senha</label><br>
-                <i class="fa-solid fa-key"></i>
-                <input type="password" id="password" name="password" required><br>
+                <a href="password/recuperar_senha.php" style="font-size: 13px;">Esqueceu sua senha?</a>
 
-                <a href="password/recuperar_senha.php" id="a_login" style="font-size: 13px;">Esqueceu sua senha?</a>
-                <br><br>
-                <input type="submit" value="Entrar" id="input_submit">
-            </div><br>
+                <button type="submit">Entrar</button>
+            </form>
 
             <div class="img_icons">
-                Login Com:
-                <a href="#"><img src="../multimidia/images/google.png" alt="Ícone do google"></a>
-                <a href="#"><img src="../multimidia/images/facebook.png" alt="Ícone do facebook"></a>
-            </div><br>
-        </form>
-    </main>
+                Login com:
+                <a href="#"><img src="../multimidia/images/google.png" alt="Google"></a>
+                <a href="#"><img src="../multimidia/images/facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

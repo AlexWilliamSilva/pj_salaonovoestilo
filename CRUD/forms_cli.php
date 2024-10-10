@@ -1,59 +1,74 @@
 <?php
-include_once "../includes/dbconnect.php";
-require_once "nav.php";
+    include_once "../includes/dbconnect.php";
 
-// Verificação se o formulário foi enviado
-if (isset($_POST['addnew']))  
-{
-    // Verificação de campos obrigatórios
-    if (empty($_POST['nome_cli']) || empty($_POST['email_cli']) || empty($_POST['tipo_do_documento_cli']) || empty($_POST['documento_cli']) || empty($_POST['uf']) || empty($_POST['cidade']) || empty($_POST['bairro']) || empty($_POST['rua']) || empty($_POST['numero']) || empty($_POST['status_cli']))
-    {
-        echo "<div class='alert alert-danger'>Por favor, preencha todos os campos obrigatórios</div>";             
-    }
-    else 
-    {
-        // Captura dos dados
-        $data_cadastro_cli = date('Y-m-d H:i:s'); // Data de cadastro
-        $nome_cli = $_POST['nome_cli'];
-        $nome_social = $_POST['nome_social'] ?? null;
-        $email_cli = $_POST['email_cli'];
-        $telefone_cli = $_POST['telefone_cli'] ?? null;
-        $celular_cli = $_POST['celular_cli'] ?? null;
-        $data_nascimento = $_POST['data_nascimento'] ?? null;
-        $tipo_do_documento_cli = $_POST['tipo_do_documento_cli'];
-        $documento_cli = $_POST['documento_cli'];
-        $uf = $_POST['uf'];
-        $cidade = $_POST['cidade'];
-        $bairro = $_POST['bairro'];
-        $rua = $_POST['rua'];
-        $numero = $_POST['numero'];
-        $complemento = $_POST['complemento'] ?? null;
-        $cep = $_POST['cep'] ?? null;
-        $status_cli = $_POST['status_cli'];
+    $erro = '';
+    $success = '';
 
-        // Uso de prepared statements para inserir cliente
-        $stmt = $con->prepare("INSERT INTO Cliente (data_cadastro_cli, nome_cli, nome_social, email_cli, telefone_cli, celular_cli, data_nascimento, tipo_do_documento_cli, documento_cli, uf, cidade, bairro, rua, numero, complemento, cep, status_cli) 
-                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-
-        if ($stmt) {
-            $stmt->bind_param("ssssssssssssssss", $data_cadastro_cli, $nome_cli, $nome_social, $email_cli, $telefone_cli, $celular_cli, $data_nascimento, $tipo_do_documento_cli, $documento_cli, $uf, $cidade, $bairro, $rua, $numero, $complemento, $cep, $status_cli);
-            if ($stmt->execute()) {
-                echo "<div class='alert alert-success'>Novo Cliente adicionado com sucesso</div>";
+    // Inserir/Atualizar Cliente
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["nome_cli"], $_POST["documento_cli"], $_POST["tipo_do_documento_cli"], $_POST["data_nascimento"], $_POST["email_cli"], $_POST["rua"], $_POST["bairro"], $_POST["cidade"], $_POST["cep"], $_POST["telefone_cli"], $_POST["uf"])) {
+            if (empty($_POST["nome_cli"]) || empty($_POST["documento_cli"]) || empty($_POST["tipo_do_documento_cli"]) || empty($_POST["data_nascimento"]) || empty($_POST["email_cli"]) || empty($_POST["rua"]) || empty($_POST["bairro"]) || empty($_POST["cidade"]) || empty($_POST["cep"]) || empty($_POST["telefone_cli"]) || empty($_POST["uf"])) {
+                $erro = "Todos os campos obrigatórios devem ser preenchidos.";
             } else {
-                echo "<div class='alert alert-danger'>Erro ao adicionar cliente: " . $stmt->error . "</div>";
+                $id_cli = isset($_POST["id_cli"]) ? $_POST["id_cli"] : -1;
+                $nome_cli = $_POST["nome_cli"];
+                $documento_cli = $_POST["documento_cli"];
+                $tipo_do_documento_cli = $_POST["tipo_do_documento_cli"];
+                $data_nascimento = $_POST["data_nascimento"];
+                $data_cadastro_cli = date('Y-m-d H:i:s'); // Setando a data e hora atual
+                $email_cli = $_POST["email_cli"];
+                $rua = $_POST["rua"];
+                $bairro = $_POST["bairro"];
+                $cidade = $_POST["cidade"];
+                $numero = $_POST["numero"];
+                $cep = $_POST["cep"];
+                $telefone_cli = $_POST["telefone_cli"];
+                $uf = $_POST["uf"];
+                $status_cli = "ativo"; // Definindo status inicial como 'ativo'
+
+                if ($id_cli == -1) { // Inserir novo cliente
+                    $stmt = $con->prepare("INSERT INTO Cliente (data_cadastro_cli, nome_cli, documento_cli, tipo_do_documento_cli, data_nascimento, email_cli, rua, bairro, cidade, cep, telefone_cli, numero, uf, status_cli) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    
+                    $stmt->bind_param("ssssssssssssss", $data_cadastro_cli, $nome_cli, $documento_cli, $tipo_do_documento_cli, $data_nascimento, $email_cli, $rua, $bairro, $cidade, $cep, $telefone_cli, $numero, $uf, $status_cli);
+                
+                    if ($stmt->execute()) {
+                        $success = "Cliente cadastrado com sucesso.";
+                    } else {
+                        $erro = "Erro ao cadastrar cliente: " . $stmt->error;
+                    }
+                }
+                
             }
-            $stmt->close();
         } else {
-            echo "<div class='alert alert-danger'>Erro ao preparar a consulta: " . $con->error . "</div>";
+            $erro = "Todos os campos obrigatórios devem ser preenchidos.";
         }
     }
-}
+
+    // Desabilitar Cliente
+    if (isset($_GET["id_cli"]) && is_numeric($_GET["id_cli"]) && isset($_GET["del"])) {
+        $id_cli = (int) $_GET["id_cli"];
+        $stmt = $con->prepare("UPDATE Cliente SET status_cli = 'desabilitado' WHERE id_cli = ?");
+        $stmt->bind_param('i', $id_cli);
+        if ($stmt->execute()) {
+            $success = "Cliente desabilitado com sucesso.";
+        } else {
+            $erro = "Erro ao desabilitar cliente: " . $stmt->error;
+        }
+        
+    }
+
+    // Consulta para buscar todos os fornecedores ativos
+    $sql = "SELECT * FROM Cliente WHERE status_cli = 'ativo'";
+    $clientes = $con->query($sql);
+
+    // Listar Clientes
+    $result = $con->query("SELECT * FROM Cliente WHERE status_cli = 'ativo'");
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Clientes | Salão Novo Estilo</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
@@ -98,123 +113,124 @@ if (isset($_POST['addnew']))
         }
     </style>
 </head>
+<?php
+    include_once "nav.php";
+?>
 <body>
 
     <h1>Cadastro de Clientes</h1>
 
-    <form action="forms_cli.php" method="POST">  
+    <?php if (!empty($erro)): ?>
+        <p style="color: red;"><?= htmlspecialchars($erro) ?></p>
+    <?php endif; ?>
 
-        <label for="nome_cli">Nome:</label><br>
-        <input type="text" name="nome_cli" id="nome_cli" value="<?= htmlspecialchars($nome_cli ?? '') ?>" required>
-        <br><br>
+    <?php if (!empty($success)): ?>
+        <p style="color: green;"><?= htmlspecialchars($success) ?></p>
+    <?php endif; ?>
 
-        <label for="nome_social">Nome Social:</label><br>
-        <input type="text" name="nome_social" id="nome_social" value="<?= htmlspecialchars($nome_social ?? '') ?>">
-        <br><br>
+    <!-- Formulário para adicionar ou editar cliente -->
+    <form action="forms_cli.php" method="POST">
+        <input type="hidden" name="id_cli" value="<?= isset($_POST['id_cli']) ? (int) $_POST['id_cli'] : -1 ?>">
 
-        <label for="email_cli">Email:</label><br>
-        <input type="email" name="email_cli" id="email_cli" value="<?= htmlspecialchars($email_cli ?? '') ?>" required>
-        <br><br>
+        <label for="nome_cli">Nome do Cliente:</label><br>
+        <input type="text" name="nome_cli"
+            value="<?= isset($_POST['nome_cli']) ? htmlspecialchars($_POST['nome_cli']) : '' ?>" required><br><br>
 
-        <label for="telefone_cli">Telefone:</label><br>
-        <input type="tel" name="telefone_cli" id="telefone_cli" value="<?= htmlspecialchars($telefone_cli ?? '') ?>">
-        <br><br>
-
-        <label for="celular_cli">Celular:</label><br>
-        <input type="tel" name="celular_cli" id="celular_cli" value="<?= htmlspecialchars($celular_cli ?? '') ?>">
-        <br><br>
-
-        <label for="data_nascimento">Data de Nascimento:</label><br>
-        <input type="date" name="data_nascimento" id="data_nascimento" value="<?= htmlspecialchars($data_nascimento ?? '') ?>">
-        <br><br>
-
-        <label for="tipo_do_documento_cli">Tipo do Documento:</label><br>
-        <input type="text" name="tipo_do_documento_cli" id="tipo_do_documento_cli" value="<?= htmlspecialchars($tipo_do_documento_cli ?? '') ?>" required>
-        <br><br>
+        <label for="tipo_do_documento_cli">Tipo de Documento:</label><br>
+        <select name="tipo_do_documento_cli" required>
+            <optgroup label="Documento">
+                <option value="invalido">SELECIONE</option>
+                <option value="cpf" <?= (isset($_POST['tipo_do_documento_cli']) && $_POST['tipo_do_documento_cli'] === 'cpf') ? 'selected' : '' ?>>CPF</option>
+                <option value="rg" <?= (isset($_POST['tipo_do_documento_cli']) && $_POST['tipo_do_documento_cli'] === 'rg') ? 'selected' : '' ?>>RG</option>
+                <option value="cnpj" <?= (isset($_POST['tipo_do_documento_cli']) && $_POST['tipo_do_documento_cli'] === 'cnpj') ? 'selected' : '' ?>>CNPJ</option>
+            </optgroup>
+        </select><br><br>
 
         <label for="documento_cli">Documento:</label><br>
-        <input type="text" name="documento_cli" id="documento_cli" value="<?= htmlspecialchars($documento_cli ?? '') ?>" required>
-        <br><br>
+        <input type="text" name="documento_cli"
+            value="<?= isset($_POST['documento_cli']) ? htmlspecialchars($_POST['documento_cli']) : '' ?>"
+            required><br><br>
 
-        <label for="uf">UF:</label><br>
-        <input type="text" name="uf" id="uf" value="<?= htmlspecialchars($uf ?? '') ?>" required>
-        <br><br>
+        <label for="data_nascimento">Data de Nascimento:</label><br>
+        <input type="date" name="data_nascimento"
+            value="<?= isset($_POST['data_nascimento']) ? htmlspecialchars($_POST['data_nascimento']) : '' ?>"
+            required><br><br>
 
-        <label for="cidade">Cidade:</label><br>
-        <input type="text" name="cidade" id="cidade" value="<?= htmlspecialchars($cidade ?? '') ?>" required>
-        <br><br>
-
-        <label for="bairro">Bairro:</label><br>
-        <input type="text" name="bairro" id="bairro" value="<?= htmlspecialchars($bairro ?? '') ?>" required>
-        <br><br>
-
-        <label for="rua">Rua:</label><br>
-        <input type="text" name="rua" id="rua" value="<?= htmlspecialchars($rua ?? '') ?>" required>
-        <br><br>
-
-        <label for="numero">Número:</label><br>
-        <input type="text" name="numero" id="numero" value="<?= htmlspecialchars($numero ?? '') ?>" required>
-        <br><br>
-
-        <label for="complemento">Complemento:</label><br>
-        <input type="text" name="complemento" id="complemento" value="<?= htmlspecialchars($complemento ?? '') ?>">
-        <br><br>
+        <label for="email_cli">Email:</label><br>
+        <input type="email" name="email_cli"
+            value="<?= isset($_POST['email_cli']) ? htmlspecialchars($_POST['email_cli']) : '' ?>" required><br><br>
 
         <label for="cep">CEP:</label><br>
-        <input type="text" name="cep" id="cep" value="<?= htmlspecialchars($cep ?? '') ?>">
-        <br><br>
+        <input type="text" name="cep" value="<?= isset($_POST['cep']) ? htmlspecialchars($_POST['cep']) : '' ?>"
+            required><br><br>
 
-        <label for="status_cli">Status:</label><br>
-        <input type="radio" name="status_cli" id="status_ativo" value="Ativo" required <?= (isset($status_cli) && $status_cli == 'Ativo') ? 'checked' : '' ?>>
-        <label for="status_ativo">Ativo</label>
-        <input type="radio" name="status_cli" id="status_inativo" value="Inativo" required <?= (isset($status_cli) && $status_cli == 'Inativo') ? 'checked' : '' ?>>
-        <label for="status_inativo">Inativo</label>
-        <br><br>
+        <label for="rua">Rua:</label><br>
+        <input type="text" name="rua" value="<?= isset($_POST['rua']) ? htmlspecialchars($_POST['rua']) : '' ?>"
+            required><br><br>
 
-        <input type="submit" name="addnew" class="btn btn-success" value="Adicionar Cliente">
+        <label for="bairro">Bairro:</label><br>
+        <input type="text" name="bairro"
+            value="<?= isset($_POST['bairro']) ? htmlspecialchars($_POST['bairro']) : '' ?>" required><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" name="cidade"
+            value="<?= isset($_POST['cidade']) ? htmlspecialchars($_POST['cidade']) : '' ?>" required><br><br>
+
+        <label for="numero">Numero:</label><br>
+        <input type="number" name="numero" min="0"
+            value="<?= isset($_POST['numero']) ? htmlspecialchars($_POST['numero']) : '' ?>" required><br><br>
+
+        <label for="telefone_cli">Telefone:</label><br>
+        <input type="text" name="telefone_cli"
+            value="<?= isset($_POST['telefone_cli']) ? htmlspecialchars($_POST['telefone_cli']) : '' ?>"
+            required><br><br>
+
+        <label for="uf">UF:</label><br>
+        <select name="uf" required>
+            <option value="invalido">SELECIONE</option>
+            <?php
+            $ufs = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
+            foreach ($ufs as $uf) {
+                echo '<option value="' . $uf . '" ' . (isset($_POST['uf']) && $_POST['uf'] === $uf ? 'selected' : '') . '>' . $uf . '</option>';
+            }
+            ?>
+        </select><br><br>
+
+        <input type="submit" value="Salvar"><br><br>
     </form>
 
-    <hr>
-
-    <!-- Mostrando os clientes -->
-    <h2>Lista de Clientes</h2>
-    <table>
-        <thead>  
+    <!-- Listar clientes -->
+    <h2>Clientes Ativos</h2>
+    <table border="1">
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
+                <th>Documento</th>
                 <th>Email</th>
-                <th>Telefone</th>
-                <th>Celular</th>
-                <th>Data de Nascimento</th>
                 <th>Status</th>
-                <th>Ações</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
-            <?php 
-                // Pegando os dados do banco de dados
-                $result = $con->query("SELECT id_cli, nome_cli, email_cli, telefone_cli, celular_cli, data_nascimento, status_cli FROM Cliente");
-
-                while ($cliente = $result->fetch_assoc()): 
-            ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
-                    <td><?= htmlspecialchars($cliente['id_cli']) ?></td>
-                    <td><?= htmlspecialchars($cliente['nome_cli']) ?></td>
-                    <td><?= htmlspecialchars($cliente['email_cli']) ?></td>
-                    <td><?= htmlspecialchars($cliente['telefone_cli']) ?></td>
-                    <td><?= htmlspecialchars($cliente['celular_cli']) ?></td>
-                    <td><?= htmlspecialchars($cliente['data_nascimento']) ?></td>
-                    <td><?= htmlspecialchars($cliente['status_cli']) ?></td>
+                    <td><?= $row["id_cli"] ?></td>
+                    <td><?= $row["nome_cli"] ?></td>
+                    <td><?= $row["documento_cli"] ?></td>
+                    <td><?= $row["email_cli"] ?></td>
+                    <td><?= $row['status_cli'] ?></td>
+                    
                     <td>
-                        <a href="forms_cli.php?id_cli=<?= $cliente['id_cli'] ?>&toggle_status=1">
-                            <?= ($cliente['status_cli'] == 'Ativo') ? 'Desabilitar' : 'Habilitar' ?>
-                        </a>
+                        <!-- modificar o editar logo abaixo - 09/10/24 -->
+                        <a href="editar_forms_cli.php?id_cli=<?= $row["id_cli"] ?>">Editar</a>
+                        <a href="forms_cli.php?id_cli=<?= $row["id_cli"] ?>&del=true"
+                            onclick="return confirm('Tem certeza que deseja desabilitar este cliente?')">Desabilitar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
-
 </body>
+
 </html>

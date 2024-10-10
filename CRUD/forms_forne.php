@@ -1,37 +1,72 @@
 <?php
-include_once "../includes/dbconnect.php";
-require_once "nav.php";
+    include_once "../includes/dbconnect.php";
 
-if (isset($_POST['addnew'])) {
-    // Verificação de campos obrigatórios
-    if (empty($_POST['nome_fornecedor']) || empty($_POST['email_forn']) || empty($_POST['tipo_do_documento']) || empty($_POST['documento_for']) || empty($_POST['uf']) || empty($_POST['cidade']) || empty($_POST['bairro']) || empty($_POST['rua']) || empty($_POST['cep']) || empty($_POST['status_fornecedor'])) {
-        echo "Por favor, preencha todos os campos obrigatórios";
-    } else {
-        // Captura dos dados
-        $nome_fornecedor = $_POST['nome_fornecedor'];
-        $email_forn = $_POST['email_forn'];
-        $tel_forn = $_POST['tel_forn'] ?? null; // Telefone pode ser opcional
-        $celular_for = $_POST['celular_for'] ?? null; // Celular pode ser opcional
-        $tipo_do_documento = $_POST['tipo_do_documento'];
-        $documento_for = $_POST['documento_for'];
-        $uf = $_POST['uf'];
-        $cidade = $_POST['cidade'];
-        $bairro = $_POST['bairro'];
-        $rua = $_POST['rua'];
-        $cep = $_POST['cep'];
-        $status_fornecedor = $_POST['status_fornecedor'];
+    $erro = '';
+    $success = '';
 
-        // Consulta SQL com os novos campos
-        $sql = "INSERT INTO Fornecedor (data_cadastro_for, nome_for, email_for, telefone_for, celular_for, tipo_do_documento_for, documento_for, uf, cidade, bairro, rua, cep, status_for) 
-                VALUES (NOW(), '$nome_fornecedor', '$email_forn', '$tel_forn', '$celular_for', '$tipo_do_documento', '$documento_for', '$uf', '$cidade', '$bairro', '$rua', '$cep', '$status_fornecedor')";
-        
-        if ($con->query($sql) === true) {
-            echo "<div class='alert alert-success'>Novo Fornecedor adicionado com sucesso</div>";
+    // Inserir/Atualizar Fornecedor
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST["nome_for"], $_POST["email_for"], $_POST["documento_for"], $_POST["data_cadastro_for"], $_POST["bairro_for"], $_POST["cidade_for"], $_POST["cep_for"], $_POST["celular_for"], $_POST["uf_for"])) {
+            if (empty($_POST["nome_for"]) || empty($_POST["email_for"]) || empty($_POST["documento_for"]) || empty($_POST["data_cadastro_for"]) || empty($_POST["bairro_for"]) || empty($_POST["cidade_for"]) || empty($_POST["cep_for"]) || empty($_POST["celular_for"]) || empty($_POST["uf_for"])) {
+                $erro = "Todos os campos obrigatórios devem ser preenchidos.";
+            } else {
+                $id_for = isset($_POST["id_for"]) ? $_POST["id_for"] : -1;
+                $nome_for = $_POST["nome_for"];
+                $email_for = $_POST["email_for"];
+                $documento_for = $_POST["documento_for"];
+                $data_cadastro_for = $_POST["data_cadastro_for"];
+                $bairro_for = $_POST["bairro_for"];
+                $cidade_for = $_POST["cidade_for"];
+                $cep_for = $_POST["cep_for"];
+                $celular_for = $_POST["celular_for"];
+                $uf_for = $_POST["uf_for"];
+                $status_for = 'ativo';  //definir ativo sempre
+                $telefone_for = isset($_POST["telefone_for"]) ? $_POST["telefone_for"] : null;
+
+                if ($id_for == -1) { // Inserir novo fornecedor
+                    $stmt = $con->prepare("INSERT INTO Fornecedor (nome_for, email_for, documento_for, data_cadastro_for, bairro, cidade, cep, celular_for, uf, telefone_for, status_for) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("sssssssssss", $nome_for, $email_for, $documento_for, $data_cadastro_for, $bairro_for, $cidade_for, $cep_for, $celular_for, $uf_for, $telefone_for, $status_for);
+
+                    if ($stmt->execute()) {
+                        $success = "Fornecedor cadastrado com sucesso.";
+                    } else {
+                        $erro = "Erro ao cadastrar fornecedor: " . $stmt->error;
+                    }
+                } else { // Atualizar fornecedor existente
+                    $stmt = $con->prepare("UPDATE Fornecedor SET nome_for = ?, email_for = ?, documento_for = ?, data_cadastro_for = ?, bairro = ?, cidade = ?, cep = ?, celular_for = ?, uf = ?, telefone_for = ?, status_for = ? WHERE id_for = ?");
+                    $stmt->bind_param("sssssssssssi", $nome_for, $email_for, $documento_for, $data_cadastro_for, $bairro_for, $cidade_for, $cep_for, $celular_for, $uf_for, $telefone_for, $status_for, $id_for);
+
+                    if ($stmt->execute()) {
+                        $success = "Fornecedor atualizado com sucesso.";
+                    } else {
+                        $erro = "Erro ao atualizar fornecedor: " . $stmt->error;
+                    }
+                }
+            }
         } else {
-            echo "<div class='alert alert-danger'>Erro: Ocorreu um erro ao adicionar</div>";
+            $erro = "Todos os campos obrigatórios devem ser preenchidos.";
         }
     }
-}
+
+    // Desabilitar Fornecedor
+    if (isset($_GET["id_for"]) && is_numeric($_GET["id_for"]) && isset($_GET["del"])) {
+        $id_for = (int) $_GET["id_for"];
+        $stmt = $con->prepare("UPDATE Fornecedor SET status_for = 'desabilitado' WHERE id_for = ?");
+        $stmt->bind_param('i', $id_for);
+        if ($stmt->execute()) {
+            $success = "Fornecedor desabilitado com sucesso.";
+        } else {
+            $erro = "Erro ao desabilitar fornecedor: " . $stmt->error;
+        }
+    }
+
+    // Consulta para buscar todos os fornecedores ativos
+    $sql = "SELECT * FROM Fornecedor WHERE status_for = 'ativo'";
+    $fornecedores = $con->query($sql);
+
+    if (!$fornecedores) {
+        $erro = "Erro ao buscar fornecedores: " . $mysqli->error;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -67,111 +102,176 @@ if (isset($_POST['addnew'])) {
         }
     </style>
 </head>
+<?php
+    include_once "nav.php";
+?>
 <body>
+    <h1>Cadastro de Fornecedores</h1>
+
     <?php if (!empty($erro)): ?>
         <p style="color: red;"><?= htmlspecialchars($erro) ?></p>
     <?php endif; ?>
 
-    <h1>Cadastro Fornecedores</h1>
+    <?php if (!empty($success)): ?>
+        <p style="color: green;"><?= htmlspecialchars($success) ?></p>
+    <?php endif; ?>
 
-    <form action="forms_forne.php" method="POST"> <!-- Formulário de cadastro -->
+    <!-- Formulário para adicionar ou editar fornecedor -->
+    <form action="forms_forne.php" method="POST">
+        <input type="hidden" name="id_for" value="<?= isset($_POST['id_for']) ? $_POST['id_for'] : -1 ?>">
 
-        <label for="nome_fornecedor">Nome:</label><br>
-        <input type="text" name="nome_fornecedor" id="nome_fornecedor" value="<?= htmlspecialchars($nome_fornecedor ?? '') ?>" required> 
-        <br><br>
+        <label for="nome_for">Nome do Fornecedor:</label><br>
+        <input type="text" name="nome_for"
+            value="<?= isset($_POST['nome_for']) ? htmlspecialchars($_POST['nome_for']) : '' ?>" required><br><br>
 
-        <label for="email_forn">Email:</label><br>
-        <input type="email" name="email_forn" id="email_forn" value="<?= htmlspecialchars($email_forn ?? '') ?>" required>
-        <br><br>
-
-        <label for="tel_forn">Telefone:</label><br>
-        <input type="text" name="tel_forn" id="tel_forn" value="<?= htmlspecialchars($tel_forn ?? '') ?>">
-        <br><br>
-
-        <label for="celular_for">Celular:</label><br>
-        <input type="text" name="celular_for" id="celular_for" value="<?= htmlspecialchars($celular_for ?? '') ?>">
-        <br><br>
-
-        <label for="tipo_do_documento">Tipo de Documento:</label><br>
-        <input type="text" name="tipo_do_documento" id="tipo_do_documento" value="<?= htmlspecialchars($tipo_do_documento ?? '') ?>" required>
-        <br><br>
+        <label for="email_for">Email:</label><br>
+        <input type="email" name="email_for"
+            value="<?= isset($_POST['email_for']) ? htmlspecialchars($_POST['email_for']) : '' ?>" required><br><br>
 
         <label for="documento_for">Documento:</label><br>
-        <input type="text" name="documento_for" id="documento_for" value="<?= htmlspecialchars($documento_for ?? '') ?>" required>
-        <br><br>
+        <input type="text" name="documento_for" id="documento_for" placeholder="99.999.999/0001-99" maxlength="18"
+            value="<?= isset($_POST['documento_for']) ? htmlspecialchars($_POST['documento_for']) : '' ?>"
+            required><br><br>
 
-        <label for="uf">UF:</label><br>
-        <input type="text" name="uf" id="uf" value="<?= htmlspecialchars($uf ?? '') ?>" required>
-        <br><br>
+        <script>
+            document.getElementById('documento_for').addEventListener('input', function (event) {
+                // Chama a função para formatar o CNPJ
+                let valorFormatado = MascaraParaLabel(event.target.value);
 
-        <label for="cidade">Cidade:</label><br>
-        <input type="text" name="cidade" id="cidade" value="<?= htmlspecialchars($cidade ?? '') ?>" required>
-        <br><br>
+                // Atualiza o campo com o valor formatado
+                event.target.value = valorFormatado;
+            });
 
-        <label for="bairro">Bairro:</label><br>
-        <input type="text" name="bairro" id="bairro" value="<?= htmlspecialchars($bairro ?? '') ?>" required>
-        <br><br>
+            function MascaraParaLabel(valorDoTextBox) {
+                // Remove caracteres não numéricos
+                valorDoTextBox = valorDoTextBox.replace(/\D/g, '');
 
-        <label for="rua">Rua:</label><br>
-        <input type="text" name="rua" id="rua" value="<?= htmlspecialchars($rua ?? '') ?>" required>
-        <br><br>
+                // Aplica a máscara se o comprimento for menor ou igual a 14 caracteres
+                if (valorDoTextBox.length <= 14) {
+                    // Coloca ponto entre o segundo e o terceiro dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})(\d)/, "$1.$2");
 
-        <label for="cep">CEP:</label><br>
-        <input type="text" name="cep" id="cep" value="<?= htmlspecialchars($cep ?? '') ?>" required>
-        <br><br>
+                    // Coloca ponto entre o quinto e o sexto dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
 
-        <label for="status_fornecedor">Status fornecedor:</label><br>
-        <input type="radio" name="status_fornecedor" id="status_ativo" value="Ativo" <?= (isset($status_fornecedor) && $status_fornecedor == 'Ativo') ? 'checked' : '' ?> required>
-        <label for="status_ativo">Ativo</label>
-        <input type="radio" name="status_fornecedor" id="status_inativo" value="Inativo" <?= (isset($status_fornecedor) && $status_fornecedor == 'Inativo') ? 'checked' : '' ?> required>
-        <label for="status_inativo">Inativo</label>
-        <br><br>
+                    // Coloca uma barra entre o oitavo e o nono dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3/$4");
 
-        <input type="submit" name="addnew" class="btn btn-success" value="Adicionar Fornecedor">
+                    // Coloca um hífen depois do bloco de quatro dígitos
+                    valorDoTextBox = valorDoTextBox.replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, "$1.$2.$3/$4-$5");
+                }
+
+                return valorDoTextBox;
+            }
+
+        </script>
+
+
+        <input type="hidden" name="data_cadastro_for" value="<?= date('Y-m-d H:i:s') ?>" required>
+
+        <label for="cep_for">CEP:</label><br>
+        <input type="text" name="cep_for"
+            value="<?= isset($_POST['cep_for']) ? htmlspecialchars($_POST['cep_for']) : '' ?>" required><br><br>
+
+        <label for="bairro_for">Bairro:</label><br>
+        <input type="text" name="bairro_for"
+            value="<?= isset($_POST['bairro_for']) ? htmlspecialchars($_POST['bairro_for']) : '' ?>" required><br><br>
+
+        <label for="cidade_for">Cidade:</label><br>
+        <input type="text" name="cidade_for"
+            value="<?= isset($_POST['cidade_for']) ? htmlspecialchars($_POST['cidade_for']) : '' ?>" required><br><br>
+
+        <label for="telefone_for">Telefone:</label><br>
+        <input type="text" name="telefone_for" maxlength="8"
+            value="<?= isset($_POST['telefone_for']) ? htmlspecialchars($_POST['telefone_for']) : '' ?>"><br><br>
+
+        <label for="celular_for">Celular:</label><br>
+        <input type="text" name="celular_for" maxlength="11"
+            value="<?= isset($_POST['celular_for']) ? htmlspecialchars($_POST['celular_for']) : '' ?>" required><br><br>
+
+
+        <label for="uf_for">UF:</label><br>
+        <select name="uf_for" required>
+            <option value="">SELECIONE</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select><br><br>
+
+        <button
+            type="submit"><?= (isset($_POST['id_for']) && $_POST['id_for'] != -1) ? 'Salvar' : 'Cadastrar' ?>
+        </button>
     </form>
 
     <hr>
 
-    <!-- Mostrando os fornecedores -->
+    <!-- Exibição dos fornecedores -->
     <h2>Lista de Fornecedores</h2>
     <table border="1">
-        <thead>  
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Email</th>
+                <th>Documento</th>
+                <th>Data de Cadastro</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>CEP</th>
                 <th>Telefone</th>
                 <th>Celular</th>
-                <th>Tipo de Documento</th>
-                <th>Documento</th>
                 <th>Status</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <?php 
-                // Pegando os dados do banco de dados
-                $result = $con->query("SELECT id_for, nome_for, email_for, telefone_for, celular_for, tipo_do_documento_for, documento_for, status_for FROM Fornecedor");
-
-                while ($fornecedor = $result->fetch_assoc()): 
-            ?>
+            <?php while ($fornecedor = $fornecedores->fetch_assoc()): ?>
                 <tr>
                     <td><?= htmlspecialchars($fornecedor['id_for']) ?></td>
                     <td><?= htmlspecialchars($fornecedor['nome_for']) ?></td>
                     <td><?= htmlspecialchars($fornecedor['email_for']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['documento_for']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['data_cadastro_for']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['bairro']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['cidade']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['uf']) ?></td>
+                    <td><?= htmlspecialchars($fornecedor['cep']) ?></td>
                     <td><?= htmlspecialchars($fornecedor['telefone_for']) ?></td>
                     <td><?= htmlspecialchars($fornecedor['celular_for']) ?></td>
-                    <td><?= htmlspecialchars($fornecedor['tipo_do_documento_for']) ?></td>
-                    <td><?= htmlspecialchars($fornecedor['documento_for']) ?></td>
                     <td><?= htmlspecialchars($fornecedor['status_for']) ?></td>
                     <td>
-                        <a href="forms_forne.php?id_for=<?= $fornecedor['id_for'] ?>&toggle_status=1">
-                            <?= ($fornecedor['status_for'] == 'Ativo') ? 'Desabilitar' : 'Habilitar' ?>
-                        </a>
+                        <a href="forms_forne.php?id_for=<?= $fornecedor['id_for'] ?>&del=1"
+                            onclick="return confirm('Tem certeza que deseja desabilitar este fornecedor?')">Desabilitar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
 </body>
+
 </html>

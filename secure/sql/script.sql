@@ -150,3 +150,7 @@ CREATE TABLE dbNovoEstilo.items_pedido (
 select * from Produto;
 
 select * from Usuario;
+
+select * from Fornecedor;
+
+select * from Cliente;
