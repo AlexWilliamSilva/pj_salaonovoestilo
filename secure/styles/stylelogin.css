@@ -60,6 +60,7 @@ body {
 .right-panel h2 {
     margin-bottom: 20px;
     font-size: 28px;
+    font-family: 'Inria Serif', serif;
 }
 
 .right-panel form {
