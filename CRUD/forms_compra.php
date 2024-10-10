@@ -74,7 +74,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>+Compra | Salão Novo Estilo</title>
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="../multimidia/icon/faviconsalao.jpg" type="image/x-icon">
     <style>
         * {
             text-align: center;

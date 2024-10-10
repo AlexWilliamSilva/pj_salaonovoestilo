@@ -43,6 +43,8 @@
     transform: scale(0.85);
 }
 
+
+
 @media (min-width: 1368px) {
     .navbar-nav {
         flex: 1;
@@ -50,7 +52,9 @@
         margin-right: auto;
     }
 
-    .botaologin {
+    .navbar>.container-fluid{ flex-direction: row-reverse; }
+
+    /* .botaologin {
         margin-left: ;
-    }
+    } */
 }
